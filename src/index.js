@@ -69,4 +69,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.$j = $j;
-$j(alert('Document is Ready'))
