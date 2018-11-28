@@ -42,16 +42,24 @@ $j.ajax = (options) => {
   if (merged.method === 'GET') {
     merged.url += queryString(merged.data);
   }
-  xhr.open(merged.method, merged.url);
-  xhr.onload = (e) => {
-    if (xhr.status === 200) {
-      merged.success(xhr.response);
-    } else {
-      merges.error(xhr.response);
-    }
-  };
-  xhr.send(JSON.stringify(options.data));
+  return sendRequest(merged);
 };
+
+function sendRequest(obj) {
+  const xml = new XMLHttpRequest();
+  return new Promise((resolve, reject) => {
+    xml.open(obj.method, obj.url);
+    xml.onload = (e) => {
+      const responseJson = JSON.parse(xml.response);
+      if (xml.status === 200) {
+        resolve(responseJson);
+      } else {
+        reject(responseJson);
+      }
+    };
+    xml.send(JSON.stringify(obj.data));
+  });
+}
 
 function queryString(data) {
   const keys = Object.keys(data);
