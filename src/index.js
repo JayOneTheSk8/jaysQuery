@@ -1,7 +1,7 @@
 const DOMNodeCollection = require('./dom_node_collection.js');
 
 const loadedFunctions = [];
-const documentReady = true;
+let documentReady = false;
 
 $j = (arg) => {
   if (arg instanceof HTMLElement) {
@@ -63,6 +63,7 @@ function queryString(data) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  documentReady = true;
   for (let i = 0; i < loadedFunctions.length; i++) {
     loadedFunctions[i]();
   }
