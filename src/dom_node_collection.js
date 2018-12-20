@@ -152,7 +152,7 @@ class DOMNodeCollection {
     const nodes = this.nodes;
     for (let i = 0; i < nodes.length; i++) {
       nodes[i].className = this.classCache[i];
-    }
+    } 
     this.classCache = {};
   }
 
