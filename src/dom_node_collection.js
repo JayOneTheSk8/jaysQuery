@@ -5,6 +5,7 @@ class DOMNodeCollection {
       items.push(nodes[i]);
     }
     this.nodes = items;
+    this.classCache = {};
   }
 
   each(callback){
@@ -139,11 +140,19 @@ class DOMNodeCollection {
   }
 
   hide() {
-    this.addClass('hidden');
+    const nodes = this.nodes;
+    for (let i = 0; i < nodes.length; i++) {
+      this.classCache[i] = nodes[i].className;
+      nodes[i].className = "hidden"; // must have hidden class in stylesheet
+    }
   }
 
   show() {
-    this.removeClass('hidden');
+    const nodes = this.nodes;
+    for (let i = 0; i < nodes.length; i++) {
+      nodes[i].className = this.classCache[i];
+    }
+    this.classCache = {};
   }
 
   width() {
