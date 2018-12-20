@@ -76,5 +76,3 @@ document.addEventListener('DOMContentLoaded', () => {
     loadedFunctions[i]();
   }
 });
-
-window.$j = $j;
