@@ -5,6 +5,7 @@ class DOMNodeCollection {
       items.push(nodes[i]);
     }
     this.nodes = items;
+    this.heldClasses = {};
   }
 
   each(callback){
@@ -137,6 +138,7 @@ class DOMNodeCollection {
       node[eventKey] = [];
     });
   }
+
 
 }
 
