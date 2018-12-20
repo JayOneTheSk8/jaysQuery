@@ -145,6 +145,14 @@ class DOMNodeCollection {
   show() {
     this.removeClass('hidden');
   }
+
+  width() {
+    return this.nodes[0].clientWidth;
+  }
+
+  height() {
+    return this.nodes[0].clientHeight;
+  }
 }
 
 module.exports = DOMNodeCollection;
