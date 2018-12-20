@@ -5,7 +5,6 @@ class DOMNodeCollection {
       items.push(nodes[i]);
     }
     this.nodes = items;
-    this.heldClasses = {};
   }
 
   each(callback){
@@ -139,7 +138,13 @@ class DOMNodeCollection {
     });
   }
 
+  hide() {
+    this.addClass('hidden');
+  }
 
+  show() {
+    this.removeClass('hidden');
+  }
 }
 
 module.exports = DOMNodeCollection;
