@@ -148,6 +148,7 @@ class DOMNodeCollection {
   }
 
   show() {
+    if (Object.keys(this.classCache).length === 0) { return; }
     const nodes = this.nodes;
     for (let i = 0; i < nodes.length; i++) {
       nodes[i].className = this.classCache[i];
