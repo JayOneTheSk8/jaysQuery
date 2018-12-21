@@ -62,7 +62,7 @@ class DOMNodeCollection {
             return nodeClass;
           }
         });
-        node.className = truncatedClass.join(' ');
+        node.className = truncatedClass.join(' ').slice(0, -1);
       }
     });
   }
@@ -152,7 +152,7 @@ class DOMNodeCollection {
     const nodes = this.nodes;
     for (let i = 0; i < nodes.length; i++) {
       nodes[i].className = this.classCache[i];
-    } 
+    }
     this.classCache = {};
   }
 
