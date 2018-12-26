@@ -140,6 +140,7 @@ class DOMNodeCollection {
   }
 
   hide() {
+    if (Object.keys(this.classCache).length !== 0) { return; }
     const nodes = this.nodes;
     for (let i = 0; i < nodes.length; i++) {
       this.classCache[i] = nodes[i].className;
