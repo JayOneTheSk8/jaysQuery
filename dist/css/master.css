@@ -10,6 +10,16 @@
 
 body {
   overflow: hidden;
+  font-family: monospace;
+}
+
+code {
+  background: #ffffd5;
+  padding: 7px;
+  display: inline-block;
+  border: 1px solid #9c5c39;
+  border-radius: 6px;
+  margin: 6px 0px;
 }
 
 .definition {
@@ -22,7 +32,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   background-color: lightgray;
-  width: 315px;
+  width: 395px;
   height: 100vh;
 }
 
@@ -39,6 +49,22 @@ body {
   min-width: 680px;
 }
 
+.heading {
+  background-color: lightgrey;
+  width: 87%;
+  padding: 8px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.information {
+  font-size: 14px;
+  width: 87%;
+  margin-bottom: 26px;
+}
+
 .main-content {
   display: flex;
   flex-direction: row;
@@ -46,18 +72,25 @@ body {
 
 .title {
   font-size: 74px;
-  font-family: monospace;
   font-weight: 600;
 }
 
 .go-link {
   margin: 10px 0px 10px 20px;
   font-size: 20px;
-  font-family: monospace;
   cursor: pointer;
 }
 
 .go-link:hover {
   text-decoration: underline;
   font-weight: 600;
+}
+
+.site-using {
+  width: 300px;
+  border: 5px double black;
+}
+
+.site-using:hover {
+  background-color: grey;
 }
