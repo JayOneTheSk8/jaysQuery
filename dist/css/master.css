@@ -12,16 +12,18 @@ body {
   overflow: hidden;
 }
 
-.functions {
-  background-color: lightgray;
-  width: 170px;
-  height: 100vh;
+.definition {
+  padding-top: 30px;
+  padding-left: 41px;
 }
 
 .function-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: lightgray;
+  width: 170px;
+  height: 100vh;
 }
 
 .hidden {
@@ -38,7 +40,7 @@ body {
 }
 
 .main-content {
-  display: block;
+  display: flex;
   flex-direction: row;
 }
 
