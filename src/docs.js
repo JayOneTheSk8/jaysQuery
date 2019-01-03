@@ -14,7 +14,9 @@ const setClick = (queryObject, section) => {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   about = $j('#about').html();
+  addClass = $j('#addClass').html();
   setClick($j('#to-about'), about);
+  setClick($j('#to-addClass'), addClass);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
