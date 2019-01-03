@@ -28,6 +28,18 @@ code {
   width: 80%;
 }
 
+.define-divider {
+  width: 87%;
+  border: 5px solid lightgrey;
+  margin: 10px 0px;
+  border-radius: 5px;
+}
+
+.define-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .function-list {
   display: flex;
   flex-direction: column;
