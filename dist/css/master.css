@@ -19,7 +19,7 @@ code {
   display: inline-block;
   border: 1px solid #9c5c39;
   border-radius: 6px;
-  margin: 6px 0px;
+  /* margin: 6px 0px; */
 }
 
 .definition {
