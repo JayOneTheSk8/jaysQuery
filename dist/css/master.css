@@ -1,3 +1,29 @@
+#addClass {
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+#width {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.functions {
+  background-color: lightgray;
+  width: 170px;
+  height: 100vh;
+}
+
+.function-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .hidden {
   display: none;
 }
@@ -8,10 +34,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 680px;
+}
+
+.main-content {
+  display: block;
+  flex-direction: row;
 }
 
 .title {
   font-size: 74px;
   font-family: monospace;
+  font-weight: 600;
+}
+
+.go-link {
+  margin: 10px 0px 10px 20px;
+  font-size: 20px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.go-link:hover {
+  text-decoration: underline;
   font-weight: 600;
 }
