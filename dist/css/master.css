@@ -44,20 +44,6 @@ italic {
   font-weight: 600;
 }
 
-.description {
-  background-color: lightgrey;
-  width: 87%;
-  border-radius: 7px;
-  padding: 6px;
-  font-size: 17px;
-}
-
-.description-title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
 .function-list {
   display: flex;
   flex-direction: column;
@@ -65,6 +51,11 @@ italic {
   background-color: lightgray;
   min-width: 250px;
   height: 100vh;
+}
+
+.go-link:hover {
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .hidden {
@@ -90,10 +81,36 @@ italic {
   font-weight: 600;
 }
 
+.html-text {
+  background-color: floralwhite;
+  padding: 16px;
+  display: inline-block;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+
+.html-title {
+  font-weight: 600;
+}
+
 .information {
   font-size: 14px;
   width: 87%;
   margin-bottom: 26px;
+}
+
+.info-box {
+  background-color: lightgrey;
+  width: 87%;
+  border-radius: 7px;
+  padding: 6px;
+  font-size: 17px;
+}
+
+.info-box-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .main-content {
@@ -105,11 +122,6 @@ italic {
   margin: 10px 0px 10px 20px;
   font-size: 20px;
   cursor: pointer;
-}
-
-.go-link:hover {
-  text-decoration: underline;
-  font-weight: 600;
 }
 
 .site-using {
