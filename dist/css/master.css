@@ -26,17 +26,16 @@ italic {
   font-style: italic;
 }
 
+.code {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .definition {
   padding-top: 30px;
   padding-left: 41px;
   width: 80%;
-}
-
-.define-divider {
-  width: 87%;
-  border: 5px solid lightgrey;
-  margin: 10px 0px;
-  border-radius: 5px;
 }
 
 .define-title {
@@ -81,7 +80,7 @@ italic {
   font-weight: 600;
 }
 
-.html-text {
+.code-text {
   background-color: floralwhite;
   padding: 16px;
   display: inline-block;
@@ -89,7 +88,7 @@ italic {
   border-radius: 5px;
 }
 
-.html-title {
+.code-title {
   font-weight: 600;
 }
 
