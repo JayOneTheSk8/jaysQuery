@@ -17,6 +17,22 @@ italic {
   font-style: italic;
 }
 
+.close-dropdown {
+  position: relative;
+  bottom: 50%;
+  left: 88%;
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #4170f8;
+  color: #47baf8;
+  border-radius: 0px 13px 13px 0px;
+  width: 23px;
+  padding: 3px;
+  z-index: -1;
+  transition: left 0.5s;
+}
+
 .code {
   display: flex;
   flex-direction: row;
@@ -38,8 +54,7 @@ italic {
 }
 
 .definition {
-  padding-top: 30px;
-  padding-left: 41px;
+  padding: 30px 0px 30px 41px;
   width: 80%;
   overflow-y: auto;
   min-width: 550px;
@@ -124,6 +139,11 @@ italic {
   display: flex;
   flex-direction: row;
   height: 75%;
+}
+
+.open-dropdown {
+  left: 100%;
+  transition: left 0.5s;
 }
 
 .script {
