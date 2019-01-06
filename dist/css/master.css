@@ -56,7 +56,7 @@ italic {
   align-items: flex-start;
   background-color: lightgray;
   min-width: 250px;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
 }
 
