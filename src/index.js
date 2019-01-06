@@ -29,7 +29,6 @@ $j.extend = (...objects) => {
 };
 
 $j.ajax = (options) => {
-  const xhr = new XMLHttpRequest();
   const defaultObject = {
     method: 'GET',
     url: "",

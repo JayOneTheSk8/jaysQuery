@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>jaysQuery Docs</title>
     <link rel="icon" href="src/jaysQuery-logo.png" type='image/png'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <script type="text/javascript" src="dist/main.js"></script>
     <script type="text/javascript" src="src/docs.js"></script>
     <link rel="stylesheet" href="dist/css/reset.css">
     <link rel="stylesheet" href="dist/css/master.css">
+
   </head>
   <body>
 
@@ -16,26 +18,28 @@
     </header>
 
     <main class="main-content">
-      <ul class="function-list">
-        <li id="to-addClass" class="go-link">addClass</li>
-        <li id="to-append" class="go-link">append</li>
-        <li id="to-attr" class="go-link">attr</li>
-        <li id="to-children" class="go-link">children</li>
-        <li id="to-each" class="go-link">each</li>
-        <li id="to-empty" class="go-link">empty</li>
-        <li id="to-find" class="go-link">find</li>
-        <li id="to-height" class="go-link">height</li>
-        <li id="to-hide" class="go-link">hide</li>
-        <li id="to-html" class="go-link">html</li>
-        <li id="to-on" class="go-link">on</li>
-        <li id="to-off" class="go-link">off</li>
-        <li id="to-parent" class="go-link">parent</li>
-        <li id="to-remove" class="go-link">remove</li>
-        <li id="to-removeClass" class="go-link">removeClass</li>
-        <li id="to-show" class="go-link">show</li>
-        <li id="to-width" class="go-link">width</li>
-        <li id="to-about" class="go-link">About jaysQuery</li>
-      </ul>
+      <div class="">
+        <ul class="function-list">
+          <li id="to-addClass" class="go-link">addClass</li>
+          <li id="to-append" class="go-link">append</li>
+          <li id="to-attr" class="go-link">attr</li>
+          <li id="to-children" class="go-link">children</li>
+          <li id="to-each" class="go-link">each</li>
+          <li id="to-empty" class="go-link">empty</li>
+          <li id="to-find" class="go-link">find</li>
+          <li id="to-height" class="go-link">height</li>
+          <li id="to-hide" class="go-link">hide</li>
+          <li id="to-html" class="go-link">html</li>
+          <li id="to-on" class="go-link">on</li>
+          <li id="to-off" class="go-link">off</li>
+          <li id="to-parent" class="go-link">parent</li>
+          <li id="to-remove" class="go-link">remove</li>
+          <li id="to-removeClass" class="go-link">removeClass</li>
+          <li id="to-show" class="go-link">show</li>
+          <li id="to-width" class="go-link">width</li>
+          <li id="to-about" class="go-link">About jaysQuery</li>
+        </ul>
+      </div>
 
       <article class="definition">
       </article>
@@ -56,7 +60,7 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-              &lt;div class=""&gt
+              &lt;div id="box" class=""&gt
               <br>
               &nbsp&nbspText will turn green
               <br>
@@ -66,6 +70,16 @@
           <section class="css">
             <h3 class="code-title">CSS</h3>
             <div class="code-text">
+              #box {
+                <br>
+                &nbsp&nbspwidth: 50px;
+                <br>
+                &nbsp&nbspheight: 50px;
+                <br>
+                &nbsp&nbspborder: 1px solid black;
+                <br>
+              }
+              <br><br>
               .right {
                 <br>
                 &nbsp&nbspcolor: green;
@@ -73,9 +87,18 @@
               }
             </div>
           </section>
+          <section class="javascript">
+            <h3 class="code-title">JavaScript</h3>
+            <div class="code-text">
+              $j('#box').addClass('red');
+            </div>
+          </section>
         </section>
         <section class="example">
+          <figure class="addClass-example-button">RUN&gt&gt</figure>
+          <section classs="example-box">
 
+          </section>
         </section>
       </article>
     </div>
