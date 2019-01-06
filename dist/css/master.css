@@ -65,6 +65,14 @@ italic {
   font-weight: 700;
 }
 
+.dropdown-hover-area {
+  position: absolute;
+  top: 25%;
+  width: 285px;
+  height: 75%;
+  z-index: -1;
+}
+
 .function-list {
   display: flex;
   flex-direction: column;
