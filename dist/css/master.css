@@ -16,11 +16,11 @@ body {
 
 code {
   background: #ffffd5;
-  padding: 7px;
+  padding: 5px;
   display: inline-block;
   border: 1px solid #9c5c39;
   border-radius: 6px;
-  /* margin: 6px 0px; */
+  margin: 5px 0px;
 }
 
 italic {
@@ -79,6 +79,10 @@ italic {
   justify-content: center;
   min-width: 680px;
   height: 25%;
+  background-image: url(../../src/jays.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .heading {
@@ -87,7 +91,7 @@ italic {
   padding: 8px;
   margin: 10px 0px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -100,9 +104,10 @@ italic {
 }
 
 .information {
-  font-size: 14px;
+  font-size: 19px;
   width: 87%;
   margin-bottom: 26px;
+  line-height: 1.4;
 }
 
 .info-box {
@@ -140,12 +145,9 @@ italic {
   background-color: grey;
 }
 
-.title {
-  font-size: 74px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-}
+/* .title {
+  max-width: 50%;
+} */
 
 .warning {
   color: #5b4040;
