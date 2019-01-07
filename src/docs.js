@@ -63,7 +63,7 @@ window.addEventListener("resize", handleDropdown);
 document.addEventListener("DOMContentLoaded", (e) => {
   about = $j('#about').html();
   addClass = $j('#addClass').html();
-  $dropdownMenu = $j('.function-list');
+  $dropdownMenu = $j('#dropdown-menu');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownArea.on('mouseenter', showDropdownButton);
   $dropdownArea.on('mouseleave', hideDropdownButton);
