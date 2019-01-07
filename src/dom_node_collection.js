@@ -157,23 +157,23 @@ class DOMNodeCollection {
     this.classCache = {};
   }
 
-  width(newWidth) {
-    if (typeof newWidth === 'number') {
-      this.each((node) => {
-        node.clientWidth = newWidth;
-      });
-      return;
-    }
+  width() {
+    // if (typeof newWidth === 'number') {
+    //   this.each((node) => {
+    //     node.clientWidth = newWidth;
+    //   });
+    //   return;
+    // }
     return this.nodes[0].clientWidth;
   }
 
-  height(newHeight) {
-    if (typeof newHeight === 'number') {
-      this.each((node) => {
-        node.clientHeight = newHeight;
-      });
-      return;
-    }
+  height() {
+    // if (typeof newHeight === 'number') {
+    //   this.each((node) => {
+    //     node.clientHeight = newHeight;
+    //   });
+    //   return;
+    // }
     return this.nodes[0].clientHeight;
   }
 }
