@@ -1,10 +1,12 @@
 let about, addClass, dropdownOpenStatus;
-let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $header, $mainContent, $sections;
+let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 
 const changeDefinition = (html) => {
   $definition.html(html);
+  $exampleButton = $j('.example-button');
+  $exampleButton.on('click', playExample)
 };
 
 function checkHeader() {
@@ -19,6 +21,17 @@ const linkTo = (section) => {
   return e => {
     changeDefinition(section);
   };
+};
+
+const playExample = (e) => {
+  debugger
+  // switch (e.) {
+  //   case expression:
+  //
+  //     break;
+  //   default:
+  //
+  // }
 };
 
 const setClick = (queryObject, section) => {
@@ -67,9 +80,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
   addClass = $j('#addClass').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
+  $dropdownButton = $j('.close-dropdown-button');
   $dropdownArea.on('mouseenter', showDropdownButton);
   $dropdownArea.on('mouseleave', hideDropdownButton);
-  $dropdownButton = $j('.close-dropdown-button');
   $dropdownButton.on('click', changeDropdown);
   $dropdownButton.on('mouseenter', showDropdownButton);
   $dropdownButton.on('mouseleave', hideDropdownButton);
