@@ -1,16 +1,19 @@
 let about, addClass, dropdownOpenStatus, each, hide, removeClass, show;
-let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections;
+let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections, $showItem;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
 const REMOVE_CLASS = "removeClassExample";
 const EACH = "eachExample";
 const HIDE = "hideExample";
+const SHOW = "showExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
   $exampleButton = $j('.example-button');
-  $exampleButton.on('click', playExample)
+  $exampleButton.on('click', playExample);
+  $showItem = $j('#show-text');
+  $showItem.hide();
 };
 
 function checkHeader() {
@@ -40,6 +43,9 @@ const playExample = (e) => {
       return;
     case HIDE:
       $j('.will-disappear').hide();
+      return;
+    case SHOW:
+      $showItem.show();
       return;
     default:
       return;
