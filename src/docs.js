@@ -4,6 +4,7 @@ const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
 const REMOVE_CLASS = "removeClassExample";
+const EACH = "eachExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
@@ -33,10 +34,14 @@ const playExample = (e) => {
     case REMOVE_CLASS:
       $j('#sentence').removeClass('red');
       return;
+    case EACH:
+      $j('.to-li').each((el) => el.outerHTML = (`<li class="new-li">${el.innerHTML}</li>`));
+      return;
     default:
       return;
   }
 };
+//FIX
 
 const setClick = (queryObject, section) => {
   queryObject.on('click', linkTo(section));
