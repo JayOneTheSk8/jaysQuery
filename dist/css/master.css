@@ -57,6 +57,7 @@ italic {
 .code-title {
   font-weight: 700;
   margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .definition {
