@@ -221,7 +221,7 @@ italic {
 }
 
 /* EXAMPLES */
-#text, #sentence, .to-li, .will-disappear {
+#text, #sentence, .to-li, .will-disappear, #show-text {
   font-weight: 700;
 }
 
@@ -236,4 +236,9 @@ italic {
 
 .red {
   color: red;
+}
+
+
+.on-show {
+  color: green;
 }

@@ -1,4 +1,4 @@
-let about, addClass, dropdownOpenStatus, each, hide, removeClass;
+let about, addClass, dropdownOpenStatus, each, hide, removeClass, show;
 let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
@@ -45,7 +45,6 @@ const playExample = (e) => {
       return;
   }
 };
-//FIX
 
 const setClick = (queryObject, section) => {
   queryObject.on('click', linkTo(section));
@@ -94,6 +93,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   removeClass = $j('#removeClass').html();
   each = $j('#each').html();
   hide = $j('#hide').html();
+  show = $j('#show').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setClick($j('#to-removeClass'), removeClass);
   setClick($j('#to-each'), each);
   setClick($j('#to-hide'), hide);
+  setClick($j('#to-show'), show);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
