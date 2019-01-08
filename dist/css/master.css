@@ -61,7 +61,6 @@ italic {
 .definition {
   padding: 30px 0px 30px 41px;
   overflow-y: auto;
-  min-width: 550px;
 }
 
 .define-title {
@@ -115,7 +114,6 @@ italic {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 680px;
   height: 25%;
   background-image: url(../../src/jays.svg);
   background-repeat: no-repeat;
