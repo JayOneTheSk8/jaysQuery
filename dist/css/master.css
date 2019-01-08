@@ -221,16 +221,13 @@ italic {
 }
 
 /* EXAMPLES */
-#text {
+#text, #sentence, .to-li, .will-disappear {
   font-weight: 700;
 }
 
-#sentence {
-  font-weight: 700;
-}
-
-.to-li {
-  font-weight: 700;
+.afix-hide {
+  min-width: 153px;
+  min-height: 17px;
 }
 
 .new-li {
