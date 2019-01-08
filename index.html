@@ -46,6 +46,61 @@
       </article>
     </main>
 
+    <div id="removeClass" class="definition-section">
+      <h1 class="define-title">.removeClass(<italic>className</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">Removes the specified class from each element in the set of matched elements.</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;div id="sentence" class="red"&gt
+              <br>
+              &nbsp&nbspText will turn black.
+              <br>
+              &lt/div&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #sentence {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+              <br><br>
+              .red {
+                <br>
+                &nbsp&nbspcolor: red;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('#sentence').removeClass('red');
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="removeClassExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <div id="sentence" class="red">
+              Text will turn black.
+            </div>
+          </section>
+        </section>
+      </article>
+    </div>
+
     <div id="addClass" class="definition-section">
       <h1 class="define-title">.addClass(<italic>className</italic>)</h1>
       <br>
@@ -61,7 +116,7 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-              &lt;div id="box" class=""&gt
+              &lt;div id="text" class=""&gt
               <br>
               &nbsp&nbspText will turn red
               <br>
@@ -87,7 +142,7 @@
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              $j('#box').addClass('red');
+              $j('#text').addClass('red');
             </div>
           </section>
         </section>

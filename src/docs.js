@@ -1,8 +1,9 @@
-let about, addClass, dropdownOpenStatus;
+let about, addClass, dropdownOpenStatus, removeClass;
 let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
+const REMOVE_CLASS = "removeClassExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
@@ -28,6 +29,9 @@ const playExample = (e) => {
   switch (e.currentTarget.id) {
     case ADD_CLASS:
       $j('#text').addClass('red');
+      return;
+    case REMOVE_CLASS:
+      $j('#sentence').removeClass('red');
       return;
     default:
       return;
@@ -78,6 +82,7 @@ window.addEventListener("resize", handleDropdown);
 document.addEventListener("DOMContentLoaded", (e) => {
   about = $j('#about').html();
   addClass = $j('#addClass').html();
+  removeClass = $j('#removeClass').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -90,6 +95,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   $mainContent = $j('.main-content');
   setClick($j('#to-about'), about);
   setClick($j('#to-addClass'), addClass);
+  setClick($j('#to-removeClass'), removeClass);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
