@@ -229,6 +229,14 @@ italic {
   font-weight: 700;
 }
 
+.to-li {
+  font-weight: 700;
+}
+
+.new-li {
+  color: blue;
+}
+
 .red {
   color: red;
 }

@@ -81,21 +81,30 @@
                 &nbsp&nbspfont-weight: 700;
                 <br>
               }
+              <br><br>
+              .new-li {
+                <br>
+                &nbsp&nbspcolor: blue;
+                <br>
+              }
             </div>
           </section>
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              $j('.to-li').each((el) => el.outerHTML = `&lt;li&gt${el.innerHTML}&lt;/li&gt`);
+              $j('.to-li').each((el) => el.outerHTML = (`&lt;li class="new-li"&gt${el.innerHTML}&lt;/li&gt`);
             </div>
           </section>
         </section>
         <section class="example">
           <figure id="eachExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box">
-            <p id="sentence" class="red">
-              Text will turn black.
+            <p class="to-li">
+              Text will turn into a LI.
             </p>
+            <div class="to-li">
+              Text will also turn into a LI.
+            </div>
           </section>
         </section>
       </article>
