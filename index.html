@@ -60,12 +60,42 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-              &lt;p id="to-li"&gt
+              &lt;p class="to-li"&gt
               <br>
               &nbsp&nbspText will turn into a LI.
               <br>
               &lt/p&gt
+              <br><br>
+              &lt;div class="to-li"&gt
+              <br>
+              &nbsp&nbspText will also turn into a LI.
+              <br>
+              &lt/div&gt
             </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .to-li {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('.to-li').each((el) => el.outerHTML = `&lt;li&gt${el.innerHTML}&lt;/li&gt`);
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="eachExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <p id="sentence" class="red">
+              Text will turn black.
+            </p>
           </section>
         </section>
       </article>
