@@ -27,7 +27,7 @@ const linkTo = (section) => {
 const playExample = (e) => {
   switch (e.currentTarget.id) {
     case ADD_CLASS:
-      $j('#box').addClass('red');
+      $j('#text').addClass('red');
       return;
     default:
       return;

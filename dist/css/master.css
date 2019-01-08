@@ -212,11 +212,14 @@ italic {
   right: 35px;
 }
 .warning {
-  color: #5b4040;
+  color: #AA4532;
   font-style: italic;
 }
 
 /* EXAMPLES */
+#text {
+  font-weight: 700;
+}
 
 .red {
   color: red;
