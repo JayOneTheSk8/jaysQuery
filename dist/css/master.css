@@ -109,6 +109,10 @@ italic {
   cursor: pointer;
 }
 
+.example-button:active {
+  color: red;
+}
+
 .function-list {
   display: flex;
   flex-direction: column;
