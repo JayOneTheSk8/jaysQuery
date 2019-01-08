@@ -49,7 +49,57 @@
     <div id="hide" class="definition-section">
       <h1 class="define-title">.hide()</h1>
       <br>
-
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">Hides the elements in the collection</p>
+        <p class="warning">To make this work you must include a class named <code>.hidden { display: none; }</code> in your stylesheet</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;p class="will-disappear"&gt
+              <br>
+              &nbsp&nbspTest the magic.
+              <br>
+              &lt/p&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .will-disappear {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+              <br><br>
+              .hidden {
+                <br>
+                &nbsp&nbspdisplay: none;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('.will-disappear').hide();
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="hideExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <p class="will-disappear">
+              Test the magic. 
+            </p>
+          </section>
+        </section>
+      </article>
     </div>
 
     <div id="each" class="definition-section">
