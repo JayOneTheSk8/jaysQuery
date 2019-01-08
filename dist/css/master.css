@@ -230,6 +230,11 @@ italic {
   min-height: 17px;
 }
 
+.afix-show {
+  min-width: 51px;
+  min-height: 17px;
+}
+
 .new-li {
   color: blue;
 }
