@@ -19,10 +19,7 @@ italic {
 }
 
 .close-dropdown-button {
-  position: relative;
-  bottom: 50%;
-  left: 88%;
-  display: block;
+  cursor: pointer;
   font-size: 30px;
   font-weight: 600;
   background-color: #4170f8;
@@ -31,12 +28,14 @@ italic {
   width: 23px;
   padding: 3px;
   z-index: -1;
-  transition: left 0.5s;
+  position: relative;
+  right: 30px;
+  transition: right 0.5s;
 }
 
 .closed {
-  position: relative;
   right: 250px;
+  transition: right 0.6s;
 }
 
 .code {
@@ -61,7 +60,6 @@ italic {
 
 .definition {
   padding: 30px 0px 30px 41px;
-  width: 80%;
   overflow-y: auto;
   min-width: 550px;
 }
@@ -72,12 +70,18 @@ italic {
 }
 
 .dropdown-hover-area {
-  position: absolute;
-  top: 25%;
   width: 35px;
-  height: 75%;
-  left: 250px;
+  height: 100%;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  position: relative;
+  transition: right 0.6s;
+  display: flex;
 }
 
 .function-list {
@@ -129,6 +133,10 @@ italic {
   font-weight: 700;
 }
 
+.hidden {
+  display: none;
+}
+
 .information {
   font-size: 19px;
   width: 87%;
@@ -157,12 +165,12 @@ italic {
 }
 
 .open-dropdown {
-  left: 100%;
-  transition: left 0.5s;
+  right: 0px;
+  transition: right 0.5s;
 }
 
 .script {
-  width: 100%;
+  width: 75%;
   overflow-wrap: break-word;
 }
 
@@ -175,6 +183,11 @@ italic {
   background-color: grey;
 }
 
+.shifted {
+  min-width: 100vw;
+  position: relative;
+  right: 35px;
+}
 .warning {
   color: #5b4040;
   font-style: italic;

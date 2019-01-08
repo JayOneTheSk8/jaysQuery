@@ -1,5 +1,5 @@
 let about, addClass, dropdownOpenStatus;
-let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $header, $sections;
+let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $header, $mainContent, $sections;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 
@@ -36,12 +36,14 @@ const hideDropdownButton = () => {
 const toggleDropdown = () => {
   switch (dropdownOpenStatus) {
     case true:
-      $dropdownMenu.removeClass('closed');
+      $dropdownMenu.show();
+      $definition.removeClass('shifted');
       return;
     case false:
-      if (!$dropdownMenu.nodes[0].className.includes('closed')) {
-        $dropdownMenu.addClass('closed');
-      }
+        if (!$dropdownMenu.nodes[0].className.includes('closed')) {
+          $dropdownMenu.hide();
+          $definition.removeClass('shifted');
+        }
       return;
     default:
       return;
@@ -63,13 +65,16 @@ window.addEventListener("resize", handleDropdown);
 document.addEventListener("DOMContentLoaded", (e) => {
   about = $j('#about').html();
   addClass = $j('#addClass').html();
-  $dropdownMenu = $j('#dropdown-menu');
+  $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownArea.on('mouseenter', showDropdownButton);
   $dropdownArea.on('mouseleave', hideDropdownButton);
   $dropdownButton = $j('.close-dropdown-button');
   $dropdownButton.on('click', changeDropdown);
+  $dropdownButton.on('mouseenter', showDropdownButton);
+  $dropdownButton.on('mouseleave', hideDropdownButton);
   $header = $j('.header');
+  $mainContent = $j('.main-content');
   setClick($j('#to-about'), about);
   setClick($j('#to-addClass'), addClass);
   $definition = $j('.definition');
