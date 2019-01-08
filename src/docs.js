@@ -2,6 +2,7 @@ let about, addClass, dropdownOpenStatus;
 let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
+const ADD_CLASS = "addClassExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
@@ -24,14 +25,13 @@ const linkTo = (section) => {
 };
 
 const playExample = (e) => {
-  debugger
-  // switch (e.) {
-  //   case expression:
-  //
-  //     break;
-  //   default:
-  //
-  // }
+  switch (e.currentTarget.id) {
+    case ADD_CLASS:
+      $j('#box').addClass('red');
+      return;
+    default:
+      return;
+  }
 };
 
 const setClick = (queryObject, section) => {

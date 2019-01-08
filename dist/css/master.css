@@ -215,3 +215,9 @@ italic {
   color: #5b4040;
   font-style: italic;
 }
+
+/* EXAMPLES */
+
+.red {
+  color: red;
+}
