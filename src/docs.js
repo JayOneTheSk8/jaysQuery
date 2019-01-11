@@ -1,4 +1,4 @@
-let about, addClass, dropdownOpenStatus, each, hide, height, removeClass, show;
+let about, addClass, dropdownOpenStatus, each, hide, height, removeClass, show, width;
 let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections, $showItem;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
@@ -8,6 +8,7 @@ const EACH = "eachExample";
 const HIDE = "hideExample";
 const SHOW = "showExample";
 const HEIGHT = "heightExample";
+const WIDTH = "widthExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
@@ -49,9 +50,14 @@ const playExample = (e) => {
       $showItem.show();
       return;
     case HEIGHT:
+    case WIDTH:
       let $size = $j('.size');
       let $textarea = $j('.stretch');
-      $size.html(` ${$textarea.height()}`);
+      if (e.currentTarget.id === HEIGHT) {
+        $size.html(` ${$textarea.height()}`);
+      } else {
+        $size.html(` ${$textarea.width()}`);
+      }
       return;
     default:
       return;
@@ -107,6 +113,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   hide = $j('#hide').html();
   show = $j('#show').html();
   height = $j('#height').html();
+  width = $j('#width').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -124,6 +131,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setClick($j('#to-hide'), hide);
   setClick($j('#to-show'), show);
   setClick($j('#to-height'), height);
+  setClick($j('#to-width'), width);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
