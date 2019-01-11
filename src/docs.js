@@ -9,6 +9,7 @@ const HIDE = "hideExample";
 const SHOW = "showExample";
 const HEIGHT = "heightExample";
 const WIDTH = "widthExample";
+const HTML = "htmlExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
@@ -58,6 +59,11 @@ const playExample = (e) => {
       } else {
         $size.html(` ${$textarea.width()}`);
       }
+      return;
+    case HTML:
+      let input = $j('#html-input').nodes[0].value;
+      let $paragraph = $j('#change-html');
+      $paragraph.html(input);
       return;
     default:
       return;
