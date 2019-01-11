@@ -258,3 +258,7 @@ italic {
   font-size: 18px;
   font-weight: 700;
 }
+
+.size {
+  display: inline-block;
+}
