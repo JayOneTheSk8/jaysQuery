@@ -7,6 +7,7 @@ const REMOVE_CLASS = "removeClassExample";
 const EACH = "eachExample";
 const HIDE = "hideExample";
 const SHOW = "showExample";
+const HEIGHT = "heightExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);
@@ -46,6 +47,11 @@ const playExample = (e) => {
       return;
     case SHOW:
       $showItem.show();
+      return;
+    case HEIGHT:
+      let $size = $j('.size');
+      let $textarea = $j('.stretch');
+      $size.html(` ${$textarea.height()}`);
       return;
     default:
       return;

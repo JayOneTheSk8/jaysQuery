@@ -249,3 +249,12 @@ italic {
 .on-show {
   color: green;
 }
+
+.stretch {
+  background-color: transparent;
+}
+
+.current {
+  font-size: 18px;
+  font-weight: 700;
+}
