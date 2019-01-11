@@ -60,6 +60,14 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
+              &lt;h3 class="current"&gt
+              <br>
+              &nbsp&nbspCurrent Height:
+              <br>
+              &nbsp&nbsp&lt;p class="size"&gt&lt;/p&gt
+              <br>
+              &lt;/h3&gt
+              <br>
               &lt;textarea class="stretch"&gt&lt;/textarea&gt
             </div>
           </section>
@@ -71,18 +79,32 @@
                 &nbsp&nbspbackground-color: transparent;
                 <br>
               }
+              <br><br>
+              .current {
+                <br>
+                &nbsp&nbspfont-size: 18px;
+                <br>
+              }
             </div>
           </section>
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              $j('#show-text').show();
+              let $size = $j('.size');
+              <br>
+              let $textarea = $j('.stretch');
+              <br>
+              $size.html(` ${$textarea.height()}`);
             </div>
           </section>
         </section>
         <section class="example">
           <figure id="showExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box">
+            <h3 class="current">
+              Current Height:
+              <p class="size"></p>
+            </h3>
             <textarea class="stretch"></textarea>
           </section>
         </section>
