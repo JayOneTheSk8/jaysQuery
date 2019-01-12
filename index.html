@@ -53,10 +53,78 @@
         <h3 class="info-box-title">Description</h3>
         <p class="info-box-para">With Argument: Replaces the innerHTML of each element in the collection</p>
         <p class="info-box-para">Without Argument: Returns the innerHTML of the first element in the collection</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;label id="html-label" for="html-input"&gt
+              <br>
+              &nbsp&nbspEnter Text:
+              <br>
+              &lt;/label&gt
+              <br>
+              &lt;br&gt
+              <br>
+              &lt;input id="html-input" type="text" value="Example Text"&gt
+              <br>
+              &lt;br&gt
+              <br>
+              &lt;p class="change-html"&gt&lt;/p&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #html-label {
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br>
+              #html-input {
+              <br>
+              &nbsp&nbspfont-size: 20px;
+              <br>
+              }
+              <br>
+              .change-html {
+              <br>
+              &nbsp&nbspmin-width: 227px;
+              <br>
+              &nbsp&nbspmin-height: 25px;
+              <br>
+              &nbsp&nbspborder: 1px solid black;
+              <br>
+              &nbsp&nbspfont-size: 20px;
+              <br>
+              &nbsp&nbspdisplay: inline-block;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              let input, $paragraph;
+              <br>
+              $j('#html-input').each((node) => input = node.value);
+              <br>
+              $paragraph = $j('.change-html');
+              <br>
+              $paragraph.html(input);
+            </div>
+          </section>
+        </section>
         <section class="example">
           <figure id="htmlExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box">
-            <label id="html-label" for="html-input">Enter Text:</label>
+            <label id="html-label" for="html-input">
+              Enter Text:
+            </label>
             <br>
             <input id="html-input" type="text" value="Example Text">
             <br>
@@ -64,8 +132,6 @@
           </section>
         </section>
       </article>
-      <br>
-
     </div>
 
     <div id="width" class="definition-section">
