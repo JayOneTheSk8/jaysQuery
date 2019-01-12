@@ -10,6 +10,7 @@ const SHOW = "showExample";
 const HEIGHT = "heightExample";
 const WIDTH = "widthExample";
 const HTML = "htmlExample";
+const ON = "onExample";
 
 const changeDefinition = (html) => {
   $definition.html(html);

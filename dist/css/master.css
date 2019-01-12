@@ -195,7 +195,7 @@ italic {
 }
 
 .open-dropdown {
-  right: 0px;
+  right: 0px;name="button"
   transition: right 0.5s;
 }
 
@@ -274,4 +274,12 @@ italic {
   border: 1px solid black;
   font-size: 20px;
   display: inline-block;
+}
+
+#onExample {
+  cursor: default;
+}
+
+#onExample:active {
+  color: white;
 }
