@@ -122,6 +122,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   height = $j('#height').html();
   width = $j('#width').html();
   html = $j('#html').html();
+  on = $j('#on').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -141,6 +142,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setClick($j('#to-height'), height);
   setClick($j('#to-width'), width);
   setClick($j('#to-html'), html);
+  setClick($j('#to-on'), on);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
