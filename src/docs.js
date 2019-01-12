@@ -63,7 +63,7 @@ const playExample = (e) => {
     case HTML:
       let input, $paragraph;
       $j('#html-input').each((node) => input = node.value);
-      $paragraph = $j('#change-html');
+      $paragraph = $j('.change-html');
       $paragraph.html(input);
       return;
     default:

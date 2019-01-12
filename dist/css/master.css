@@ -224,7 +224,7 @@ italic {
 }
 
 /* EXAMPLES */
-#text, #sentence, .to-li, .will-disappear, #show-text {
+#text, #sentence, .to-li, .will-disappear, #show-text, #html-label {
   font-weight: 700;
 }
 
@@ -261,5 +261,17 @@ italic {
 }
 
 .size {
+  display: inline-block;
+}
+
+#html-input {
+  font-size: 20px;
+}
+
+.change-html {
+  min-width: 227px;
+  min-height: 25px;
+  border: 1px solid black;
+  font-size: 20px;
   display: inline-block;
 }
