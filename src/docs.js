@@ -1,5 +1,5 @@
 let about, addClass, dropdownOpenStatus, each, hide, height, html, removeClass, show, width;
-let $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections, $showItem;
+let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections, $showItem;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
@@ -18,6 +18,8 @@ const changeDefinition = (html) => {
   $exampleButton.on('click', playExample);
   $showItem = $j('#show-text');
   $showItem.hide();
+  $clickHere = $j('#click-here');
+  $clickHere.on('click', moveButton);
 };
 
 function checkHeader() {
@@ -66,6 +68,30 @@ const playExample = (e) => {
       $j('#html-input').each((node) => input = node.value);
       $paragraph = $j('.change-html');
       $paragraph.html(input);
+      return;
+    case ON:
+      // moveButton($j('#click-here'));
+      return;
+    default:
+      return;
+  }
+};
+
+const moveButton = (e) => {
+  // debugger
+  switch ($clickHere.nodes[0].classList.length) {
+    case 1:
+      $clickHere.addClass('middle-position');
+      console.log($clickHere.nodes[0].classList);
+      return;
+    case 2:
+      $clickHere.addClass('bottom-position');
+      console.log($clickHere.nodes[0].classList);
+      return;
+    case 3:
+      $clickHere.removeClass('bottom-position');
+      $clickHere.removeClass('middle-position');
+      console.log($clickHere.nodes[0].classList);
       return;
     default:
       return;

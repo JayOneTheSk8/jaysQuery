@@ -297,6 +297,7 @@ italic {
   cursor: pointer;
   position: relative;
   left: 1px;
+  transition: top 0.5s;
 }
 
 .empty-space {
