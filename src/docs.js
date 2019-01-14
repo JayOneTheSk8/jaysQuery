@@ -83,8 +83,8 @@ const moveButton = (e) => {
       $clickHere.addClass('bottom-position');
       return;
     case 3:
-      $clickHere.removeClass('bottom-position');
       $clickHere.removeClass('middle-position');
+      $clickHere.removeClass('bottom-position');
       return;
     default:
       return;

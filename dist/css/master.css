@@ -313,9 +313,9 @@ italic {
 }
 
 .move-title {
-  position: absolute;
   font-size: 24.5px;
   font-weight: 700;
+  margin-bottom: -30px;
 }
 
 .top-position {

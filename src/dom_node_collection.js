@@ -62,7 +62,7 @@ class DOMNodeCollection {
             return nodeClass;
           }
         });
-        node.className = truncatedClass.join(' ').slice(0, -1);
+        node.className = truncatedClass.filter(Boolean).join(' ');
       }
     });
   }
