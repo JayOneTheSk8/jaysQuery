@@ -22,6 +22,14 @@ class DOMNodeCollection {
     }
   }
 
+  css(propertyName, value) {
+    if (value) {
+      this.each((node) => node.style[propertyName] = value);
+    } else {
+      return this.nodes[0].style[propertyName];
+    }
+  }
+
   empty() {
     this.html('');
   }
