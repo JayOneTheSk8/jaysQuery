@@ -1,6 +1,7 @@
 let about, addClass, dropdownOpenStatus, each, hide, height, html, on, off, removeClass, show, width;
-let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header,
+let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $lockButton,
 $mainContent, $moveableBox, $sections, $showItem;
+
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
@@ -13,7 +14,7 @@ const WIDTH = "widthExample";
 const HTML = "htmlExample";
 const ON = "onExample";
 
-// For .off Box
+// For .off
 const FIRST = "first-pos";
 const SECOND = "second-pos";
 const THIRD = "third-pos";
@@ -29,9 +30,28 @@ const changeDefinition = (html) => {
   $showItem.hide();
   $clickHere = $j('#click-here');
   $clickHere.on('click', moveButton);
+  $lockButton = $j('.lock-button');
+  $lockButton.on('click', checkBox);
   $moveableBox = $j('#moveable-box');
   $moveableBox.on('mouseenter', changeButtonPosition);
 };
+
+const checkBox = (e) => {
+  switch (e.currentTarget.innerHTML) {
+    case "LOCK":
+      $moveableBox.css('background-color', 'blue');
+      $moveableBox.off('mouseenter');
+      $lockButton.html('UNLOCK');
+      return;
+    case "UNLOCK":
+      $moveableBox.css('background-color', 'red');
+      $moveableBox.on('mouseenter', changeButtonPosition);
+      $lockButton.html('LOCK');
+      return;
+    default:
+      return;
+  }
+}
 
 const changeButtonPosition = (e) => {
   switch (e.target.className) {
