@@ -59,8 +59,198 @@
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;figure class="lock-button"&gtLOCK&lt;/figure&gt
+              <br>
+              &lt;figure id="moveable-box" class="first-pos"&gt&lt;/figure&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #moveable-box {
+              <br>
+              &nbsp&nbspbackground-color: red;
+              <br>
+              &nbsp&nbspwidth: 50px;
+              <br>
+              &nbsp&nbspheight: 50px;
+              <br>
+              &nbsp&nbspposition: relative;
+              <br>
+              &nbsp&nbsptransition: left 0.5s;
+              <br>
+              }
+              <br><br>
+              .first-pos {
+              <br>
+              &nbsp&nbspleft: 0px;
+              <br>
+              }
+              <br><br>
+              .second-pos {
+              <br>
+              &nbsp&nbspleft: 50px;
+              <br>
+              }
+              <br><br>
+              .third-pos {
+              <br>
+              &nbsp&nbspleft: 100px;
+              <br>
+              }
+              <br><br>
+              .fourth-pos {
+              <br>
+              &nbsp&nbspleft: 150px;
+              <br>
+              }
+              <br><br>
+              .fifth-pos {
+              <br>
+              &nbsp&nbspleft: 200px;
+              <br>
+              }
+              <br><br>
+              .sixth-pos {
+              <br>
+              &nbsp&nbspleft: 250px;
+              <br>
+              }
+              <br><br>
+              .lock-button {
+              <br>
+              &nbsp&nbspborder: none;
+              <br>
+              &nbsp&nbsppadding: 4px 6px;
+              <br>
+              &nbsp&nbspfont-size: 15px;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              &nbsp&nbspborder-radius: 6px;
+              <br>
+              &nbsp&nbspcolor: #41baf8;
+              <br>
+              &nbsp&nbspbackground-color: #4170f8;
+              <br>
+              &nbsp&nbspalign-self: center;
+              <br>
+              &nbsp&nbspcursor: pointer;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              const checkBox = (e) => {
+              <br>
+              &nbsp&nbspswitch (e.currentTarget.innerHTML) {
+              <br>
+              &nbsp&nbsp&nbsp&nbspcase "LOCK":
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.css('background-color', 'blue');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.off('mouseenter');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$lockButton.html('UNLOCK');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspcase "UNLOCK":
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.css('background-color', 'red');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.on('mouseenter', changeButtonPosition);
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$lockButton.html('LOCK');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspdefault:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp}
+              <br>
+              };
+              <br><br>
+              const changeButtonPosition = (e) => {
+                <br>
+              &nbsp&nbspswitch (e.target.className) {
+                <br>
+              &nbsp&nbsp&nbsp&nbspcase FIRST:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.removeClass('first-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.addClass('second-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspmoveableBox&nbsp&nbspcase SECOND:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.removeClass('second-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.addClass('third-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspcase THIRD:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.removeClass('third-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.addClass('fourth-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspcase FOURTH:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.removeClass('fourth-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.addClass('fifth-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspcase FIFTH:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.removeClass('fifth-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.addClass('sixth-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspcase SIXTH:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.removeClass('sixth-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$moveableBox.addClass('first-pos');
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp&nbsp&nbspdefault:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbsp}
+              <br>
+              };
+              <br><br>
+              $lockButton = $j('.lock-button');
+              <br>
+              $lockButton.on('click', checkBox);
+              <br>
+              $moveableBox = $j('#moveable-box');
+              <br>
+              $moveableBox.on('mouseenter', changeButtonPosition);
+            </div>
+          </section>
+        </section>
         <section class="example">
-          <figure id="onExample" class="example-button" disabled>RUN&gt&gt</figure>
+          <figure id="offExample" class="example-button" disabled>RUN&gt&gt</figure>
           <section class="example-box moveable-area">
             <figure class="lock-button">LOCK</figure>
             <figure id="moveable-box" class="first-pos"></figure>

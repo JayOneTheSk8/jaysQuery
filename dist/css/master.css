@@ -330,6 +330,14 @@ italic {
   top: 132px;
 }
 
+.moveable-area {
+  width: 300px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 #moveable-box {
   background-color: red;
   width: 50px;
@@ -362,14 +370,6 @@ italic {
   left: 250px;
 }
 
-.moveable-area {
-  width: 300px;
-  height: 95px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .lock-button {
   border: none;
   padding: 4px 6px;
@@ -380,9 +380,4 @@ italic {
   background-color: #4170f8;
   align-self: center;
   cursor: pointer;
-}
-
-#moveable-grid {
-  width: 300px;
-  height: 50px;
 }

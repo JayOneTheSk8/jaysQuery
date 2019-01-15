@@ -51,7 +51,7 @@ const checkBox = (e) => {
     default:
       return;
   }
-}
+};
 
 const changeButtonPosition = (e) => {
   switch (e.target.className) {
