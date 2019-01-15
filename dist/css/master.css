@@ -276,11 +276,11 @@ italic {
   display: inline-block;
 }
 
-#onExample {
+#onExample, #offExample {
   cursor: default;
 }
 
-#onExample:active {
+#onExample:active, #offExample:active {
   color: white;
 }
 
