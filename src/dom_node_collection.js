@@ -55,7 +55,7 @@ class DOMNodeCollection {
 
   addClass(newClass) {
     this.each((node) => {
-      node.className += ` ${newClass}`;
+      node.className = node.className ? `${node.className} ${newClass}` : `${newClass}`;
     });
   }
 

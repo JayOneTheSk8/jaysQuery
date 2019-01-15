@@ -1,5 +1,6 @@
 let about, addClass, dropdownOpenStatus, each, hide, height, html, on, off, removeClass, show, width;
-let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $mainContent, $sections, $showItem;
+let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header,
+$mainContent, $moveableBox, $sections, $showItem;
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
@@ -12,6 +13,14 @@ const WIDTH = "widthExample";
 const HTML = "htmlExample";
 const ON = "onExample";
 
+// For .off Box
+const FIRST = "first-pos";
+const SECOND = "second-pos";
+const THIRD = "third-pos";
+const FOURTH = "fourth-pos";
+const FIFTH = "fifth-pos";
+const SIXTH = "sixth-pos";
+
 const changeDefinition = (html) => {
   $definition.html(html);
   $exampleButton = $j('.example-button');
@@ -20,6 +29,39 @@ const changeDefinition = (html) => {
   $showItem.hide();
   $clickHere = $j('#click-here');
   $clickHere.on('click', moveButton);
+  $moveableBox = $j('#moveable-box');
+  $moveableBox.on('mouseenter', changeButtonPosition);
+};
+
+const changeButtonPosition = (e) => {
+  switch (e.target.className) {
+    case FIRST:
+      $moveableBox.removeClass('first-pos');
+      $moveableBox.addClass('second-pos');
+      return;
+    case SECOND:
+      $moveableBox.removeClass('second-pos');
+      $moveableBox.addClass('third-pos');
+      return;
+    case THIRD:
+      $moveableBox.removeClass('third-pos');
+      $moveableBox.addClass('fourth-pos');
+      return;
+    case FOURTH:
+      $moveableBox.removeClass('fourth-pos');
+      $moveableBox.addClass('fifth-pos');
+      return;
+    case FIFTH:
+      $moveableBox.removeClass('fifth-pos');
+      $moveableBox.addClass('sixth-pos');
+      return;
+    case SIXTH:
+      $moveableBox.removeClass('sixth-pos');
+      $moveableBox.addClass('first-pos');
+      return;
+    default:
+      return;
+  }
 };
 
 function checkHeader() {
