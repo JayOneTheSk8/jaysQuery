@@ -224,7 +224,7 @@ italic {
 }
 
 /* EXAMPLES */
-#text, #sentence, .to-li, .will-disappear, #show-text, #html-label {
+#text, #sentence, .to-li, .will-disappear, #show-text, #html-label, #will-empty {
   font-weight: 700;
 }
 
