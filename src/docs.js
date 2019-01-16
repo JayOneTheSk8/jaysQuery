@@ -13,6 +13,7 @@ const HEIGHT = "heightExample";
 const WIDTH = "widthExample";
 const HTML = "htmlExample";
 const ON = "onExample";
+const EMPTY = "emptyExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -130,6 +131,9 @@ const playExample = (e) => {
       $j('#html-input').each((node) => input = node.value);
       $paragraph = $j('.change-html');
       $paragraph.html(input);
+      return;
+    case EMPTY:
+      $j('#will-empty').empty();
       return;
     default:
       return;

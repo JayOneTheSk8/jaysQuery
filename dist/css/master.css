@@ -382,3 +382,8 @@ italic {
   align-self: center;
   cursor: pointer;
 }
+
+.empty-fix {
+  min-height: 25px;
+  min-width: 550px;
+}
