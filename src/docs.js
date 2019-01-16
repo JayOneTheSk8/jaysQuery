@@ -1,4 +1,4 @@
-let about, addClass, dropdownOpenStatus, each, empty, hide, height, html, on, off, removeClass, show, width;
+let about, addClass, dropdownOpenStatus, each, empty, hide, height, html, on, off, remove, removeClass, show, width;
 let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $lockButton,
 $mainContent, $moveableBox, $sections, $showItem;
 
@@ -211,6 +211,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   on = $j('#on').html();
   off = $j('#off').html();
   empty = $j('#empty').html();
+  remove = $j('#remove').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -233,6 +234,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setClick($j('#to-on'), on);
   setClick($j('#to-off'), off);
   setClick($j('#to-empty'), empty);
+  setClick($j('#to-remove'), remove);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
