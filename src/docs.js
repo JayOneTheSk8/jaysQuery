@@ -128,10 +128,8 @@ const playExample = (e) => {
       }
       return;
     case HTML:
-      let input, $paragraph;
-      $j('#html-input').each((node) => input = node.value);
-      $paragraph = $j('.change-html');
-      $paragraph.html(input);
+      const input = $j('#html-input').attr('value');
+      $j('.change-html').html(input);
       return;
     case EMPTY:
       $j('#will-empty').empty();
@@ -167,7 +165,7 @@ const playExample = (e) => {
 };
 
 const moveButton = (e) => {
-  switch ($clickHere.nodes[0].classList.length) {
+  switch ($clickHere.attr('classList').length) {
     case 1:
       $clickHere.addClass('middle-position');
       return;
@@ -202,7 +200,7 @@ const toggleDropdown = () => {
       $definition.removeClass('shifted');
       return;
     case false:
-        if (!$dropdownMenu.nodes[0].className.includes('closed')) {
+        if (!$dropdownMenu.attr('className').includes('closed')) {
           $dropdownMenu.hide();
           $definition.removeClass('shifted');
         }

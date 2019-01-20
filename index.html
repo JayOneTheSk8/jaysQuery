@@ -744,13 +744,9 @@
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              let input, $paragraph;
+              const input = $j('#html-input').attr('value');
               <br>
-              $j('#html-input').each((node) => input = node.value);
-              <br>
-              $paragraph = $j('.change-html');
-              <br>
-              $paragraph.html(input);
+              $j('.change-html').html(input);
             </div>
           </section>
         </section>
