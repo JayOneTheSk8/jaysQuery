@@ -14,6 +14,7 @@ const WIDTH = "widthExample";
 const HTML = "htmlExample";
 const ON = "onExample";
 const EMPTY = "emptyExample";
+const REMOVE = "removeExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -134,6 +135,31 @@ const playExample = (e) => {
       return;
     case EMPTY:
       $j('#will-empty').empty();
+      return;
+    case REMOVE:
+      const PARENS = "parens";
+      const HELLO = "hello";
+      const WORLD = "world";
+      const $section = $j('.hello-world');
+      let selection;
+      $j('input').each((node) => {
+        if (node.checked) {
+          selection = node;
+        }
+      });
+      switch (selection.id) {
+        case PARENS:
+          $section.remove();
+          return;
+        case HELLO:
+          $section.remove('.hello');
+          return;
+        case WORLD:
+          $section.remove('.world');
+          return;
+        default:
+          return;
+      }
       return;
     default:
       return;
