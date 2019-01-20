@@ -48,9 +48,13 @@ class DOMNodeCollection {
   }
 
   attr(attribute, data) {
-    this.each((node) => {
-      node[attribute] = data;
-    });
+    if (data) {
+      this.each((node) => {
+        node[attribute] = data;
+      });
+    } else {
+      return this.nodes[0][attribute];
+    }
   }
 
   addClass(newClass) {
