@@ -67,7 +67,155 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-
+              &lt;section class="rem-choice"&gt
+              <br>
+              &nbsp&nbsp&lt;p&gt$j('.hello-world').remove&lt;/p&gt
+              <br>
+              &nbsp&nbsp&lt;article class="rem-selections"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;label for="parens" class="rem-selector"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input checked id="parens" type="radio" name="rem-radio"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp()
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;label for="hello" class="rem-selector"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="hello" type="radio" name="rem-radio"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp('.hello')
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;label for="world" class="rem-selector"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="world" type="radio" name="rem-radio"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp('.world')
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
+              <br>
+              &nbsp&nbsp&lt;/article&gt
+              <br>
+              &lt;/section&gt
+              <br>
+              &lt;br&gt
+              <br>
+              &lt;section class="hello-world"&gt
+              <br>
+              &nbsp&nbsp&lt;h1 class="hello-title"&gtHello World!&lt;/h1&gt
+              <br>
+              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
+              <br>
+              &lt;/section&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .hello-title {
+              <br>
+              &nbsp&nbsptext-decoration: underline;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br><br>
+              .rem-choice {
+              <br>
+              &nbsp&nbspdisplay: flex;
+              <br>
+              &nbsp&nbspflex-direction: column;
+              <br>
+              &nbsp&nbsptext-align: center;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br><br>
+              .rem-selections {
+              <br>
+              &nbsp&nbspdisplay: flex;
+              <br>
+              &nbsp&nbspflex-direction: row;
+              <br>
+              &nbsp&nbspjustify-content: space-around;
+              <br>
+              }
+              <br><br>
+              .rem-selector {
+              <br>
+              &nbsp&nbspdisplay: flex;
+              <br>
+              &nbsp&nbspflex-direction: column;
+              <br>
+              &nbsp&nbspalign-items: center;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              const PARENS = "parens";
+              <br>
+              const HELLO = "hello";
+              <br>
+              const WORLD = "world";
+              <br>
+              const $section = $j('.hello-world');
+              <br>
+              let selection;
+              <br>
+              $j('input').each((node) => {
+                <br>
+              &nbsp&nbspif (node.checked) {
+                <br>
+              &nbsp&nbsp&nbsp&nbspselection = node;
+              <br>
+              &nbsp&nbsp}
+              <br>
+              });
+              <br>
+              switch (selection.id) {
+                <br>
+              &nbsp&nbspcase PARENS:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp$section.remove();
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspcase HELLO:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp$section.remove('.hello');
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspcase WORLD:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp$section.remove('.world');
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspdefault:
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              }
             </div>
           </section>
         </section>
