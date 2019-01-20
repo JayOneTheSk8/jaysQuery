@@ -120,8 +120,8 @@ class DOMNodeCollection {
       });
     } else {
       this.each((node) => node.parentElement.removeChild(node));
+      this.nodes = [];
     }
-    this.nodes = [];
   }
 
   on(event, callback) {
