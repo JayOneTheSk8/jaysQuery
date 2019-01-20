@@ -142,7 +142,7 @@ const playExample = (e) => {
       const WORLD = "world";
       const $section = $j('.hello-world');
       let selection;
-      $j('input').each((node) => {
+      $j('[name=rem-radio]').each((node) => {
         if (node.checked) {
           selection = node;
         }

@@ -73,7 +73,7 @@
               <br>
               &nbsp&nbsp&lt;article class="rem-selections"&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;label for="parens" class="rem-selector"&gt
+              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
               <br>
               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input checked id="parens" type="radio" name="rem-radio"&gt
               <br>
@@ -81,7 +81,7 @@
               <br>
               &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;label for="hello" class="rem-selector"&gt
+              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
               <br>
               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="hello" type="radio" name="rem-radio"&gt
               <br>
@@ -89,7 +89,7 @@
               <br>
               &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;label for="world" class="rem-selector"&gt
+              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
               <br>
               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="world" type="radio" name="rem-radio"&gt
               <br>
@@ -181,10 +181,10 @@
               <br>
               let selection;
               <br>
-              $j('input').each((node) => {
-                <br>
+              $j('[name=rem-radio]').each((node) => {
+              <br>
               &nbsp&nbspif (node.checked) {
-                <br>
+              <br>
               &nbsp&nbsp&nbsp&nbspselection = node;
               <br>
               &nbsp&nbsp}
@@ -192,7 +192,7 @@
               });
               <br>
               switch (selection.id) {
-                <br>
+              <br>
               &nbsp&nbspcase PARENS:
               <br>
               &nbsp&nbsp&nbsp&nbsp$section.remove();
@@ -225,15 +225,15 @@
             <section class="rem-choice">
               <p>$j('.hello-world').remove</p>
               <article class="rem-selections">
-                <label for="parens" class="rem-selector">
+                <label class="rem-selector">
                   <input checked id="parens" type="radio" name="rem-radio">
                   ()
                 </label>
-                <label for="hello" class="rem-selector">
+                <label class="rem-selector">
                   <input id="hello" type="radio" name="rem-radio">
                   ('.hello')
                 </label>
-                <label for="world" class="rem-selector">
+                <label class="rem-selector">
                   <input id="world" type="radio" name="rem-radio">
                   ('.world')
                 </label>
