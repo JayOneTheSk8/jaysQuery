@@ -35,10 +35,11 @@ class DOMNodeCollection {
   }
 
   append(arg) {
-    if (typeof arg === 'string') this.each(node => node.innerHTML += arg);
-    if (arg.constructor.name === HTMLElement) {
+    if (typeof arg === 'string') {
+      this.each(node => node.innerHTML += arg)
+    } else if (arg.constructor.name === 'HTMLElement' || arg.constructor.__proto__.name === 'HTMLElement') {
       this.each(node => node.innerHTML += arg.outerHTML);
-    } else if (arg.constructor.name === DOMNodeCollection) {
+    } else if (arg.constructor.name === 'DOMNodeCollection') {
       this.each((node) => {
         arg.each((nodeArg) => {
           this.appendChild(nodeArg)
