@@ -450,3 +450,9 @@ italic {
   list-style: circle;
   margin-left: 15px;
 }
+
+.child-li {
+  color: red;
+  font-weight: 700;
+  font-size: 20px;
+}

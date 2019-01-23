@@ -21,6 +21,7 @@ const REMOVE = "removeExample";
 const ATTR = "attrExample";
 const CSS = "cssExample";
 const APPEND = "appendExample";
+const CHILDREN = "childrenExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -189,6 +190,9 @@ const playExample = (e) => {
       let newLi = document.createElement('li');
       newLi.innerHTML = "...and more";
       $j('#add-lis').append(newLi);
+      return;
+    case CHILDREN:
+      $j('#parent').children().css('color', 'blue');
       return;
     default:
       return;
