@@ -1,9 +1,9 @@
 let about, addClass, append, attr, css, dropdownOpenStatus, each, empty, hide, height,
 html, on, off, remove, removeClass, show, width;
 
-let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu,
-$exampleButtons, $header, $lockButton, $mainContent, $moveableBox, $sections,
-$showItem;
+let $clickHere, $definition, $dropdownArea, $dropdownButton,
+$dropdownMenu, $exampleButtons, $header, $lockButton, $mainContent, $moveableBox,
+$sections, $showItem;
 
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
@@ -20,6 +20,7 @@ const EMPTY = "emptyExample";
 const REMOVE = "removeExample";
 const ATTR = "attrExample";
 const CSS = "cssExample";
+const APPEND = "appendExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -183,6 +184,11 @@ const playExample = (e) => {
       let pixelFont = $increaseFont.css('font-size');
       let fontSize = parseInt(pixelFont.split('px')[0]);
       $increaseFont.css('font-size', `${fontSize + 2}px`);
+      return;
+    case APPEND:
+      let newLi = document.createElement('li');
+      newLi.innerHTML = "...and more";
+      $j('#add-lis').append(newLi);
       return;
     default:
       return;

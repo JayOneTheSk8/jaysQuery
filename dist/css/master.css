@@ -445,3 +445,8 @@ italic {
   background-color: skyblue;
   cursor: not-allowed;
 }
+
+#add-lis {
+  list-style: circle;
+  margin-left: 15px;
+}
