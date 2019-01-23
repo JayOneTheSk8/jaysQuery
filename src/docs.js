@@ -19,6 +19,7 @@ const ON = "onExample";
 const EMPTY = "emptyExample";
 const REMOVE = "removeExample";
 const ATTR = "attrExample";
+const CSS = "cssExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -98,6 +99,16 @@ function checkHeader() {
   }
 };
 
+const handleAttrButton = (button) => {
+  if (button.attr('disabled')) {
+    button.attr('disabled', false);
+    button.html('BUTTON ENABLED');
+  } else {
+    button.attr('disabled', true);
+    button.html('BUTTON DISABLED');
+  }
+};
+
 const linkTo = (section) => {
   return e => {
     changeDefinition(section);
@@ -167,18 +178,14 @@ const playExample = (e) => {
       let $attrButton = $j('#attr-button');
       handleAttrButton($attrButton);
       return;
+    case CSS:
+      const $increaseFont = $j('#increase-font');
+      let pixelFont = $increaseFont.css('font-size');
+      let fontSize = parseInt(pixelFont.split('px')[0]);
+      $increaseFont.css('font-size', `${fontSize + 2}px`);
+      return;
     default:
       return;
-  }
-};
-
-const handleAttrButton = (button) => {
-  if (button.attr('disabled')) {
-    button.attr('disabled', false);
-    button.html('BUTTON ENABLED');
-  } else {
-    button.attr('disabled', true);
-    button.html('BUTTON DISABLED');
   }
 };
 
