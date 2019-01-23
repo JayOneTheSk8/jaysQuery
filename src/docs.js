@@ -1,6 +1,8 @@
-let about, addClass, dropdownOpenStatus, each, empty, hide, height, html, on, off, remove, removeClass, show, width;
-let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu, $exampleButtons, $header, $lockButton,
-$mainContent, $moveableBox, $sections, $showItem;
+let about, addClass, attr, dropdownOpenStatus, each, empty, hide, height, html, on,
+off, remove, removeClass, show, width;
+let $clickHere, $definition, $dropdownArea, $dropdownButton, $dropdownMenu,
+$exampleButtons, $header, $lockButton, $mainContent, $moveableBox, $sections,
+$showItem;
 
 const WINDOW = "WINDOW";
 const BUTTON = "BUTTON";
@@ -236,6 +238,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   off = $j('#off').html();
   empty = $j('#empty').html();
   remove = $j('#remove').html();
+  attr = $j('#attr').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -259,6 +262,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setClick($j('#to-off'), off);
   setClick($j('#to-empty'), empty);
   setClick($j('#to-remove'), remove);
+  setClick($j('#to-attr'), attr);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
