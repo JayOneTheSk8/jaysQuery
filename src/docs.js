@@ -17,6 +17,7 @@ const HTML = "htmlExample";
 const ON = "onExample";
 const EMPTY = "emptyExample";
 const REMOVE = "removeExample";
+const ATTR = "attrExample";
 
 // For .off
 const FIRST = "first-pos";

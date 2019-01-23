@@ -23,7 +23,7 @@ class DOMNodeCollection {
   }
 
   css(propertyName, value) {
-    if (value) {
+    if (value !== undefined) {
       this.each((node) => node.style[propertyName] = value);
     } else {
       return this.nodes[0].style[propertyName];
@@ -48,7 +48,7 @@ class DOMNodeCollection {
   }
 
   attr(attribute, data) {
-    if (data) {
+    if (data !== undefined) {
       this.each((node) => {
         node[attribute] = data;
       });
@@ -113,7 +113,7 @@ class DOMNodeCollection {
   }
 
   remove(selector) {
-    if (selector) {
+    if (selector !== undefined) {
       this.each((node) => {
         let targets = node.querySelectorAll(selector);
         if (targets) {
