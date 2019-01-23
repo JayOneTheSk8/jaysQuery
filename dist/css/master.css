@@ -417,3 +417,31 @@ italic {
   align-items: center;
   font-weight: 700;
 }
+
+.attr-fix {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+#attr-button {
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 8px;
+  font-weight: 700;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+}
+
+#attr-button:disabled {
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 8px;
+  font-weight: 700;
+  color: white;
+  background-color: skyblue;
+  cursor: not-allowed;
+}
