@@ -162,8 +162,22 @@ const playExample = (e) => {
           return;
       }
       return;
+    case ATTR:
+      let $attrButton = $j('#attr-button');
+      handleAttrButton($attrButton);
+      return;
     default:
       return;
+  }
+};
+
+const handleAttrButton = (button) => {
+  if (button.attr('disabled')) {
+    button.attr('disabled', false);
+    button.html('BUTTON ENABLED');
+  } else {
+    button.attr('disabled', true);
+    button.html('BUTTON DISABLED');
   }
 };
 
