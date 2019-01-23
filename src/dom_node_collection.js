@@ -37,7 +37,7 @@ class DOMNodeCollection {
   append(arg) {
     if (typeof arg === 'string') {
       this.each(node => node.innerHTML += arg)
-    } else if (arg.constructor.name === 'HTMLElement' || arg.constructor.__proto__.name === 'HTMLElement') {
+    } else if (arg instanceof HTMLElement) {
       this.each(node => node.innerHTML += arg.outerHTML);
     } else if (arg.constructor.name === 'DOMNodeCollection') {
       this.each((node) => {
