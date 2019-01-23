@@ -42,7 +42,7 @@ class DOMNodeCollection {
     } else if (arg.constructor.name === 'DOMNodeCollection') {
       this.each((node) => {
         arg.each((nodeArg) => {
-          this.appendChild(nodeArg)
+          node.appendChild(nodeArg)
         });
       });
     }
