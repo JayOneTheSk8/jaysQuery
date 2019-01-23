@@ -64,7 +64,88 @@
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Uses</h3>
-
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;button id="attr-button" type="button" disabled&gt
+              <br>
+              &nbsp&nbspBUTTON DISABLED
+              <br>
+              &lt;/button&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #attr-button {
+              <br>
+              &nbsp&nbspborder: none;
+              <br>
+              &nbsp&nbspborder-radius: 5px;
+              <br>
+              &nbsp&nbspfont-size: 17px;
+              <br>
+              &nbsp&nbsppadding: 8px;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              &nbsp&nbspcolor: white;
+              <br>
+              &nbsp&nbspbackground-color: blue;
+              <br>
+              &nbsp&nbspcursor: pointer;
+              <br>
+              }
+              <br><br>
+              #attr-button:disabled {
+              <br>
+              &nbsp&nbspborder: none;
+              <br>
+              &nbsp&nbspborder-radius: 5px;
+              <br>
+              &nbsp&nbspfont-size: 17px;
+              <br>
+              &nbsp&nbsppadding: 8px;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              &nbsp&nbspcolor: white;
+              <br>
+              &nbsp&nbspbackground-color: skyblue;
+              <br>
+              &nbsp&nbspcursor: not-allowed;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              const handleAttrButton = (button) => {
+              <br>
+              &nbsp&nbspif (button.attr('disabled')) {
+              <br>
+              &nbsp&nbsp&nbsp&nbspbutton.attr('disabled', false);
+              <br>
+              &nbsp&nbsp&nbsp&nbspbutton.html('BUTTON ENABLED');
+              <br>
+              &nbsp&nbsp} else {
+              <br>
+              &nbsp&nbsp&nbsp&nbspbutton.attr('disabled', true);
+              <br>
+              &nbsp&nbsp&nbsp&nbspbutton.html('BUTTON DISABLED');
+              <br>
+              &nbsp&nbsp}
+              <br>
+              };
+              <br><br>
+              let $attrButton = $j('#attr-button');
+              <br>
+              handleAttrButton($attrButton);
+            </div>
+          </section>
+        </section>
         <section class="example">
           <figure id="attrExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box attr-fix">
