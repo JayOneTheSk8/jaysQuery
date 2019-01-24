@@ -189,6 +189,10 @@ italic {
   margin-bottom: 15px;
 }
 
+.link-to-site {
+  margin: 10px;
+}
+
 .main-content {
   display: flex;
   flex-direction: row;
@@ -203,6 +207,12 @@ italic {
 .script {
   width: 75%;
   overflow-wrap: break-word;
+}
+
+.sites {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .site-using {
