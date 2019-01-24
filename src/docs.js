@@ -22,6 +22,7 @@ const ATTR = "attrExample";
 const CSS = "cssExample";
 const APPEND = "appendExample";
 const CHILDREN = "childrenExample";
+const PARENT = "parentExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -193,6 +194,9 @@ const playExample = (e) => {
       return;
     case CHILDREN:
       $j('#parent').children().css('color', 'blue');
+      return;
+    case PARENT:
+      $j('.child').parent().css('border', 'none');
       return;
     default:
       return;

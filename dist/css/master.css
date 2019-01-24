@@ -456,3 +456,13 @@ italic {
   font-weight: 700;
   font-size: 20px;
 }
+
+#mom-and-pop {
+  border: 2px dotted black;
+  padding: 10px;
+}
+
+.child {
+  font-size: 20px;
+  font-weight: 700;
+}
