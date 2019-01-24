@@ -102,7 +102,7 @@ class DOMNodeCollection {
     const selected = [];
     this.each((node) => {
       let found = node.querySelectorAll(selector);
-      if (found) {
+      if (found.length) {
         for (let i = 0; i < found.length; i++) {
           if (!selected.includes(found[i])) {
             selected.push(found[i]);
@@ -117,7 +117,7 @@ class DOMNodeCollection {
     if (selector !== undefined) {
       this.each((node) => {
         let targets = node.querySelectorAll(selector);
-        if (targets) {
+        if (targets.length) {
           for (let i = 0; i < targets.length; i++) {
             targets[i].parentElement.removeChild(targets[i]);
           }
