@@ -466,3 +466,13 @@ italic {
   font-size: 20px;
   font-weight: 700;
 }
+
+#hay-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.needle, .hay {
+  font-size: 19px;
+  color: #a97000;
+}

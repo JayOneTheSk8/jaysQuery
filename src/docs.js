@@ -23,6 +23,7 @@ const CSS = "cssExample";
 const APPEND = "appendExample";
 const CHILDREN = "childrenExample";
 const PARENT = "parentExample";
+const FIND = "findExample";
 
 // For .off
 const FIRST = "first-pos";
@@ -197,6 +198,9 @@ const playExample = (e) => {
       return;
     case PARENT:
       $j('.child').parent().css('border', 'none');
+      return;
+    case FIND:
+      $j('#haystack').find('.needle').css('color', 'darkgrey');
       return;
     default:
       return;
