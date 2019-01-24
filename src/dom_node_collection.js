@@ -13,12 +13,12 @@ class DOMNodeCollection {
   }
 
   html(string){
-    if (typeof string === 'string') {
-      this.each((node) => {
-        node.innerHTML = string;
-      });
-    } else if (string === undefined) {
+    if (string === undefined) {
       return this.nodes[0].innerHTML;
+    } else {
+      this.each((node) => {
+        node.innerHTML = `${string}`;
+      });
     }
   }
 
@@ -36,13 +36,13 @@ class DOMNodeCollection {
 
   append(arg) {
     if (typeof arg === 'string') {
-      this.each(node => node.innerHTML += arg)
+      this.each(node => node.innerHTML += arg);
     } else if (arg instanceof HTMLElement) {
       this.each(node => node.innerHTML += arg.outerHTML);
     } else if (arg.constructor.name === 'DOMNodeCollection') {
       this.each((node) => {
         arg.each((nodeArg) => {
-          node.appendChild(nodeArg)
+          node.appendChild(nodeArg);
         });
       });
     }
@@ -132,17 +132,17 @@ class DOMNodeCollection {
   on(event, callback) {
     this.each((node) => {
       node.addEventListener(event, callback);
-      const eventKey = `${event}event`
+      const eventKey = `${event}event`;
       if (!node[eventKey]) {
         node[eventKey] = [];
       }
-      node[eventKey].push(callback)
+      node[eventKey].push(callback);
     });
   }
 
   off(event) {
     this.each((node) => {
-      const eventKey = `${event}event`
+      const eventKey = `${event}event`;
       if (node[eventKey]) {
         node[eventKey].forEach((callback) => {
           node.removeEventListener(event, callback);
