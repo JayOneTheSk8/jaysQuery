@@ -66,6 +66,46 @@
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;ul id="parent"&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child-li"&gtFirst Child&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child-li"&gtSecond Child&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child-li"&gtThird Child&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child-li"&gtFourth Child&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child-li"&gtFifth Child&lt;/li&gt
+              <br>
+              &lt;/ul&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .child-li {
+              <br>
+              &nbsp&nbspcolor: red;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              &nbsp&nbspfont-size: 20px;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('#parent').children().css('color', 'blue');
+            </div>
+          </section>
+        </section>
         <section class="example">
           <figure id="childrenExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box">
