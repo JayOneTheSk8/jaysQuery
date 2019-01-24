@@ -475,4 +475,5 @@ italic {
 .needle, .hay {
   font-size: 19px;
   color: #a97000;
+  font-weight: 700;
 }
