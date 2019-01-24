@@ -47,15 +47,13 @@
       </article>
     </main>
 
-    <div id="find" class="definition-section">
-      <h1 class="define-title">.find(<italic>selector</italic>)</h1>
+    <div id="addClass" class="definition-section">
+      <h1 class="define-title">.addClass(<italic>className</italic>)</h1>
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">
-          Returns a collection of the descendants of each element in the
-          collection filtered by the passed selector
-        </p>
+        <p class="info-box-para">Adds the specified class(es) to each element in the set of matched elements.</p>
+        <p class="warning">This method does not replace a class. It appends it to the given classes of the node collection.</p>
       </article>
       <br>
       <article class="info-box">
@@ -64,222 +62,42 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-              &lt;h1 id="hay-title"&gt
+              &lt;p id="text" class=""&gt
               <br>
-              &nbsp&nbspFind the needles in the haystack...
+              &nbsp&nbspText will turn red
               <br>
-              &lt;/h1&gt
-              <br>
-              &lt;ul id="haystack"&gt
-              <br>
-              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="needle"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="needle"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="needle"&gtstraw&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
-              <br>
-              &lt;/ul&gt
+              &lt/p&gt
             </div>
           </section>
           <section class="css">
             <h3 class="code-title">CSS</h3>
             <div class="code-text">
-              #hay-title {
-              <br>
-              &nbsp&nbspfont-size: 22px;
-              <br>
-              &nbsp&nbspfont-weight: 700;
-              <br>
+              #text {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
               }
               <br><br>
-              .needle, .hay {
-              <br>
-              &nbsp&nbspfont-size: 19px;
-              <br>
-              &nbsp&nbspcolor: #a97000;
-              <br>
+              .red {
+                <br>
+                &nbsp&nbspcolor: red;
+                <br>
               }
             </div>
           </section>
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              $j('#haystack').find('.needle').css('color', 'darkgrey');
+              $j('#text').addClass('red');
             </div>
           </section>
         </section>
         <section class="example">
-          <figure id="findExample" class="example-button">RUN&gt&gt</figure>
+          <figure id="addClassExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box">
-            <h1 id="hay-title">Find the needles in the haystack...</h1>
-            <ul id="haystack">
-              <li class="hay">straw</li>
-              <li class="hay">straw</li>
-              <li class="needle">straw</li>
-              <li class="hay">straw</li>
-              <li class="hay">straw</li>
-              <li class="needle">straw</li>
-              <li class="hay">straw</li>
-              <li class="needle">straw</li>
-              <li class="hay">straw</li>
-            </ul>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="parent" class="definition-section">
-      <h1 class="define-title">.parent()</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">
-          Returns a collection of elements that are parent of the elements
-          in the collection
-        </p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class="code">
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;ul id="mom-and-pop"&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child"&gtJessica&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child"&gtJames&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child"&gtJasmine&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child"&gtJustin&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child"&gtJanice&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child"&gtJunior&lt;/li&gt
-              <br>
-              &lt;/ul&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              #mom-and-pop {
-              <br>
-              &nbsp&nbspborder: 2px dotted black;
-              <br>
-              &nbsp&nbsppadding: 10px;
-              <br>
-              }
-              <br><br>
-              .child {
-              <br>
-              &nbsp&nbspfont-size: 20px;
-              <br>
-              &nbsp&nbspfont-weight: 700;
-              <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('.child').parent().css('border', 'none');
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="parentExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <ul id="mom-and-pop">
-              <li class="child">Jessica</li>
-              <li class="child">James</li>
-              <li class="child">Jasmine</li>
-              <li class="child">Justin</li>
-              <li class="child">Janice</li>
-              <li class="child">Junior</li>
-            </ul>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="children" class="definition-section">
-      <h1 class="define-title">.children()</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">
-          Returns a collection of elements that are children of the elements
-          in the collection
-        </p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class="code">
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;ul id="parent"&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child-li"&gtFirst Child&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child-li"&gtSecond Child&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child-li"&gtThird Child&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child-li"&gtFourth Child&lt;/li&gt
-              <br>
-              &nbsp&nbsp&lt;li class="child-li"&gtFifth Child&lt;/li&gt
-              <br>
-              &lt;/ul&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              .child-li {
-              <br>
-              &nbsp&nbspcolor: red;
-              <br>
-              &nbsp&nbspfont-weight: 700;
-              <br>
-              &nbsp&nbspfont-size: 20px;
-              <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('#parent').children().css('color', 'blue');
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="childrenExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <ul id="parent">
-              <li class="child-li">First Child</li>
-              <li class="child-li">Second Child</li>
-              <li class="child-li">Third Child</li>
-              <li class="child-li">Fourth Child</li>
-              <li class="child-li">Fifth Child</li>
-            </ul>
+            <p id="text" class="">
+              Text will turn red
+            </p>
           </section>
         </section>
       </article>
@@ -341,66 +159,6 @@
             <ul id="add-lis">
               <li>You can add more LIs...</li>
             </ul>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="css" class="definition-section">
-      <h1 class="define-title">.css(<italic>propertyName</italic>, <italic>[value]</italic>)</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">
-          With data: Sets the value of the passed CSS Property of each element
-          in the collection to the passed value
-        </p>
-        <p class="info-box-para">
-          Without data: Returns the value of the passed CSS Property of the first
-          element in the collection
-        </p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class='code'>
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;p id="increase-font" style="font-size: 17px;"&gt
-              <br>
-              &nbsp&nbspBIGGER
-              <br>
-              &lt;/p&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              #increase-font {
-              <br>
-              &nbsp&nbspfont-weight: 700;
-              <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              const $increaseFont = $j('#increase-font');
-              <br>
-              let pixelFont = $increaseFont.css('font-size');
-              <br>
-              let fontSize = parseInt(pixelFont.split('px')[0]);
-              <br>
-              $increaseFont.css('font-size', `${fontSize + 2}px`);
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="cssExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <p id="increase-font" style="font-size: 17px;">BIGGER</p>
           </section>
         </section>
       </article>
@@ -514,17 +272,14 @@
       </article>
     </div>
 
-    <div id="remove" class="definition-section">
-      <h1 class="define-title">.remove(<italic>[selector]</italic>)</h1>
+    <div id="children" class="definition-section">
+      <h1 class="define-title">.children()</h1>
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Description</h3>
         <p class="info-box-para">
-          With selector: Removes any matched elements from the DOM that are
-          children of any of the elements in the collection
-        </p>
-        <p class="info-box-para">
-          Without selector: Removes each element from the DOM and the collection
+          Returns a collection of elements that are children of the elements
+          in the collection
         </p>
       </article>
       <br>
@@ -534,101 +289,89 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-              &lt;section class="rem-choice"&gt
+              &lt;ul id="parent"&gt
               <br>
-              &nbsp&nbsp&lt;p&gt$j('.hello-world').remove&lt;/p&gt
+              &nbsp&nbsp&lt;li class="child-li"&gtFirst Child&lt;/li&gt
               <br>
-              &nbsp&nbsp&lt;article class="rem-selections"&gt
+              &nbsp&nbsp&lt;li class="child-li"&gtSecond Child&lt;/li&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
+              &nbsp&nbsp&lt;li class="child-li"&gtThird Child&lt;/li&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input checked id="parens" type="radio" name="rem-radio"&gt
+              &nbsp&nbsp&lt;li class="child-li"&gtFourth Child&lt;/li&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp()
+              &nbsp&nbsp&lt;li class="child-li"&gtFifth Child&lt;/li&gt
               <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="hello" type="radio" name="rem-radio"&gt
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp('.hello')
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="world" type="radio" name="rem-radio"&gt
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp('.world')
-              <br>
-              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
-              <br>
-              &nbsp&nbsp&lt;/article&gt
-              <br>
-              &lt;/section&gt
-              <br>
-              &lt;br&gt
-              <br>
-              &lt;section class="hello-world"&gt
-              <br>
-              &nbsp&nbsp&lt;h1 class="hello-title"&gtHello World!&lt;/h1&gt
-              <br>
-              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
-              <br>
-              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
-              <br>
-              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
-              <br>
-              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
-              <br>
-              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
-              <br>
-              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
-              <br>
-              &lt;/section&gt
+              &lt;/ul&gt
             </div>
           </section>
           <section class="css">
             <h3 class="code-title">CSS</h3>
             <div class="code-text">
-              .hello-title {
+              .child-li {
               <br>
-              &nbsp&nbsptext-decoration: underline;
-              <br>
-              &nbsp&nbspfont-weight: 700;
-              <br>
-              }
-              <br><br>
-              .rem-choice {
-              <br>
-              &nbsp&nbspdisplay: flex;
-              <br>
-              &nbsp&nbspflex-direction: column;
-              <br>
-              &nbsp&nbsptext-align: center;
+              &nbsp&nbspcolor: red;
               <br>
               &nbsp&nbspfont-weight: 700;
               <br>
-              }
-              <br><br>
-              .rem-selections {
-              <br>
-              &nbsp&nbspdisplay: flex;
-              <br>
-              &nbsp&nbspflex-direction: row;
-              <br>
-              &nbsp&nbspjustify-content: space-around;
+              &nbsp&nbspfont-size: 20px;
               <br>
               }
-              <br><br>
-              .rem-selector {
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('#parent').children().css('color', 'blue');
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="childrenExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <ul id="parent">
+              <li class="child-li">First Child</li>
+              <li class="child-li">Second Child</li>
+              <li class="child-li">Third Child</li>
+              <li class="child-li">Fourth Child</li>
+              <li class="child-li">Fifth Child</li>
+            </ul>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="css" class="definition-section">
+      <h1 class="define-title">.css(<italic>propertyName</italic>, <italic>[value]</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">
+          With data: Sets the value of the passed CSS Property of each element
+          in the collection to the passed value
+        </p>
+        <p class="info-box-para">
+          Without data: Returns the value of the passed CSS Property of the first
+          element in the collection
+        </p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;p id="increase-font" style="font-size: 17px;"&gt
               <br>
-              &nbsp&nbspdisplay: flex;
+              &nbsp&nbspBIGGER
               <br>
-              &nbsp&nbspflex-direction: column;
-              <br>
-              &nbsp&nbspalign-items: center;
+              &lt;/p&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #increase-font {
               <br>
               &nbsp&nbspfont-weight: 700;
               <br>
@@ -638,84 +381,84 @@
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              const PARENS = "parens";
+              const $increaseFont = $j('#increase-font');
               <br>
-              const HELLO = "hello";
+              let pixelFont = $increaseFont.css('font-size');
               <br>
-              const WORLD = "world";
+              let fontSize = parseInt(pixelFont.split('px')[0]);
               <br>
-              const $section = $j('.hello-world');
-              <br>
-              let selection;
-              <br>
-              $j('[name=rem-radio]').each((node) => {
-              <br>
-              &nbsp&nbspif (node.checked) {
-              <br>
-              &nbsp&nbsp&nbsp&nbspselection = node;
-              <br>
-              &nbsp&nbsp}
-              <br>
-              });
-              <br>
-              switch (selection.id) {
-              <br>
-              &nbsp&nbspcase PARENS:
-              <br>
-              &nbsp&nbsp&nbsp&nbsp$section.remove();
-              <br>
-              &nbsp&nbsp&nbsp&nbspreturn;
-              <br>
-              &nbsp&nbspcase HELLO:
-              <br>
-              &nbsp&nbsp&nbsp&nbsp$section.remove('.hello');
-              <br>
-              &nbsp&nbsp&nbsp&nbspreturn;
-              <br>
-              &nbsp&nbspcase WORLD:
-              <br>
-              &nbsp&nbsp&nbsp&nbsp$section.remove('.world');
-              <br>
-              &nbsp&nbsp&nbsp&nbspreturn;
-              <br>
-              &nbsp&nbspdefault:
-              <br>
-              &nbsp&nbsp&nbsp&nbspreturn;
-              <br>
-              }
+              $increaseFont.css('font-size', `${fontSize + 2}px`);
             </div>
           </section>
         </section>
         <section class="example">
-          <figure id="removeExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box remove-fix">
-            <section class="rem-choice">
-              <p>$j('.hello-world').remove</p>
-              <article class="rem-selections">
-                <label class="rem-selector">
-                  <input checked id="parens" type="radio" name="rem-radio">
-                  ()
-                </label>
-                <label class="rem-selector">
-                  <input id="hello" type="radio" name="rem-radio">
-                  ('.hello')
-                </label>
-                <label class="rem-selector">
-                  <input id="world" type="radio" name="rem-radio">
-                  ('.world')
-                </label>
-              </article>
-            </section>
-            <br>
-            <section class="hello-world">
-              <h1 class="hello-title">Hello World!</h1>
-              <div class="hello">Hello</div>
-              <div class="world">World</div>
-              <div class="hello">Hello</div>
-              <div class="world">World</div>
-              <div class="hello">Hello</div>
-              <div class="world">World</div>
-            </section>
+          <figure id="cssExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <p id="increase-font" style="font-size: 17px;">BIGGER</p>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="each" class="definition-section">
+      <h1 class="define-title">.each(<italic>callback</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">For each element/node, executes the callback.</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;p class="to-li"&gt
+              <br>
+              &nbsp&nbspText will turn into a blue LI.
+              <br>
+              &lt/p&gt
+              <br><br>
+              &lt;div class="to-li"&gt
+              <br>
+              &nbsp&nbspText will also turn into a blue LI.
+              <br>
+              &lt/div&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .to-li {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+              <br><br>
+              .new-li {
+                <br>
+                &nbsp&nbspcolor: blue;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('.to-li').each((el) => el.outerHTML = (`&lt;li class="new-li"&gt${el.innerHTML}&lt;/li&gt`);
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="eachExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <p class="to-li">
+              Text will turn into a blue LI.
+            </p>
+            <div class="to-li">
+              Text will also turn into a blue LI.
+            </div>
           </section>
         </section>
       </article>
@@ -765,6 +508,312 @@
           <figure id="emptyExample" class="example-button">RUN&gt&gt</figure>
           <section class="example-box empty-fix">
             <h1 id="will-empty">This text will be removed but the h1 tag will remain.</h1>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="find" class="definition-section">
+      <h1 class="define-title">.find(<italic>selector</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">
+          Returns a collection of the descendants of each element in the
+          collection filtered by the passed selector
+        </p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;h1 id="hay-title"&gt
+              <br>
+              &nbsp&nbspFind the needles in the haystack...
+              <br>
+              &lt;/h1&gt
+              <br>
+              &lt;ul id="haystack"&gt
+              <br>
+              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="needle"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="needle"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="needle"&gtstraw&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="hay"&gtstraw&lt;/li&gt
+              <br>
+              &lt;/ul&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #hay-title {
+              <br>
+              &nbsp&nbspfont-size: 22px;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br><br>
+              .needle, .hay {
+              <br>
+              &nbsp&nbspfont-size: 19px;
+              <br>
+              &nbsp&nbspcolor: #a97000;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('#haystack').find('.needle').css('color', 'darkgrey');
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="findExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <h1 id="hay-title">Find the needles in the haystack...</h1>
+            <ul id="haystack">
+              <li class="hay">straw</li>
+              <li class="hay">straw</li>
+              <li class="needle">straw</li>
+              <li class="hay">straw</li>
+              <li class="hay">straw</li>
+              <li class="needle">straw</li>
+              <li class="hay">straw</li>
+              <li class="needle">straw</li>
+              <li class="hay">straw</li>
+            </ul>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="height" class="definition-section">
+      <h1 class="define-title">.height()</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">Returns the height of the first element in the collection</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;h3 class="current"&gt
+              <br>
+              &nbsp&nbspCurrent Height:
+              <br>
+              &nbsp&nbsp&lt;p class="size"&gt&lt;/p&gt
+              <br>
+              &lt;/h3&gt
+              <br>
+              &lt;textarea class="stretch"&gt&lt;/textarea&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .stretch {
+                <br>
+                &nbsp&nbspbackground-color: transparent;
+                <br>
+              }
+              <br><br>
+              .current {
+                <br>
+                &nbsp&nbspfont-size: 18px;
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+              <br><br>
+              .size {
+                <br>
+                &nbsp&nbspdisplay: inline-block;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              let $size = $j('.size');
+              <br><br>
+              let $textarea = $j('.stretch');
+              <br><br>
+              $size.html(` ${$textarea.height()}`);
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="heightExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <h3 class="current">
+              Current Height:
+              <p class="size"></p>
+            </h3>
+            <textarea class="stretch"></textarea>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="hide" class="definition-section">
+      <h1 class="define-title">.hide()</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">Hides the elements in the collection</p>
+        <p class="warning">To make this work you must include a class named <code>.hidden { display: none; }</code> in your stylesheet</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;p class="will-disappear"&gt
+              <br>
+              &nbsp&nbspTest the magic.
+              <br>
+              &lt/p&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .will-disappear {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+              <br><br>
+              .hidden {
+                <br>
+                &nbsp&nbspdisplay: none;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('.will-disappear').hide();
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="hideExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box afix-hide">
+            <p class="will-disappear">
+              Test the magic.
+            </p>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="html" class="definition-section">
+      <h1 class="define-title">.html(<italic>[string]</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">With Argument: Replaces the innerHTML of each element in the collection</p>
+        <p class="info-box-para">Without Argument: Returns the innerHTML of the first element in the collection</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class='code'>
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;label id="html-label" for="html-input"&gt
+              <br>
+              &nbsp&nbspEnter Text:
+              <br>
+              &lt;/label&gt
+              <br>
+              &lt;br&gt
+              <br>
+              &lt;input id="html-input" type="text" value="Example Text"&gt
+              <br>
+              &lt;br&gt
+              <br>
+              &lt;p class="change-html"&gt&lt;/p&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #html-label {
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br>
+              #html-input {
+              <br>
+              &nbsp&nbspfont-size: 20px;
+              <br>
+              }
+              <br>
+              .change-html {
+              <br>
+              &nbsp&nbspmin-width: 227px;
+              <br>
+              &nbsp&nbspmin-height: 25px;
+              <br>
+              &nbsp&nbspborder: 1px solid black;
+              <br>
+              &nbsp&nbspfont-size: 20px;
+              <br>
+              &nbsp&nbspdisplay: inline-block;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              const input = $j('#html-input').attr('value');
+              <br>
+              $j('.change-html').html(input);
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="htmlExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <label id="html-label" for="html-input">
+              Enter Text:
+            </label>
+            <br>
+            <input id="html-input" type="text" value="Example Text">
+            <br>
+            <p class="change-html"></p>
           </section>
         </section>
       </article>
@@ -1148,13 +1197,352 @@
       </article>
     </div>
 
-    <div id="html" class="definition-section">
-      <h1 class="define-title">.html(<italic>[string]</italic>)</h1>
+    <div id="parent" class="definition-section">
+      <h1 class="define-title">.parent()</h1>
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">With Argument: Replaces the innerHTML of each element in the collection</p>
-        <p class="info-box-para">Without Argument: Returns the innerHTML of the first element in the collection</p>
+        <p class="info-box-para">
+          Returns a collection of elements that are parent of the elements
+          in the collection
+        </p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;ul id="mom-and-pop"&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child"&gtJessica&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child"&gtJames&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child"&gtJasmine&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child"&gtJustin&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child"&gtJanice&lt;/li&gt
+              <br>
+              &nbsp&nbsp&lt;li class="child"&gtJunior&lt;/li&gt
+              <br>
+              &lt;/ul&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #mom-and-pop {
+              <br>
+              &nbsp&nbspborder: 2px dotted black;
+              <br>
+              &nbsp&nbsppadding: 10px;
+              <br>
+              }
+              <br><br>
+              .child {
+              <br>
+              &nbsp&nbspfont-size: 20px;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('.child').parent().css('border', 'none');
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="parentExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <ul id="mom-and-pop">
+              <li class="child">Jessica</li>
+              <li class="child">James</li>
+              <li class="child">Jasmine</li>
+              <li class="child">Justin</li>
+              <li class="child">Janice</li>
+              <li class="child">Junior</li>
+            </ul>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="remove" class="definition-section">
+      <h1 class="define-title">.remove(<italic>[selector]</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">
+          With selector: Removes any matched elements from the DOM that are
+          children of any of the elements in the collection
+        </p>
+        <p class="info-box-para">
+          Without selector: Removes each element from the DOM and the collection
+        </p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;section class="rem-choice"&gt
+              <br>
+              &nbsp&nbsp&lt;p&gt$j('.hello-world').remove&lt;/p&gt
+              <br>
+              &nbsp&nbsp&lt;article class="rem-selections"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input checked id="parens" type="radio" name="rem-radio"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp()
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="hello" type="radio" name="rem-radio"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp('.hello')
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;label class="rem-selector"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input id="world" type="radio" name="rem-radio"&gt
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp('.world')
+              <br>
+              &nbsp&nbsp&nbsp&nbsp&lt;/label&gt
+              <br>
+              &nbsp&nbsp&lt;/article&gt
+              <br>
+              &lt;/section&gt
+              <br>
+              &lt;br&gt
+              <br>
+              &lt;section class="hello-world"&gt
+              <br>
+              &nbsp&nbsp&lt;h1 class="hello-title"&gtHello World!&lt;/h1&gt
+              <br>
+              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="hello"&gtHello&lt;/div&gt
+              <br>
+              &nbsp&nbsp&lt;div class="world"&gtWorld&lt;/div&gt
+              <br>
+              &lt;/section&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              .hello-title {
+              <br>
+              &nbsp&nbsptext-decoration: underline;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br><br>
+              .rem-choice {
+              <br>
+              &nbsp&nbspdisplay: flex;
+              <br>
+              &nbsp&nbspflex-direction: column;
+              <br>
+              &nbsp&nbsptext-align: center;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+              <br><br>
+              .rem-selections {
+              <br>
+              &nbsp&nbspdisplay: flex;
+              <br>
+              &nbsp&nbspflex-direction: row;
+              <br>
+              &nbsp&nbspjustify-content: space-around;
+              <br>
+              }
+              <br><br>
+              .rem-selector {
+              <br>
+              &nbsp&nbspdisplay: flex;
+              <br>
+              &nbsp&nbspflex-direction: column;
+              <br>
+              &nbsp&nbspalign-items: center;
+              <br>
+              &nbsp&nbspfont-weight: 700;
+              <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              const PARENS = "parens";
+              <br>
+              const HELLO = "hello";
+              <br>
+              const WORLD = "world";
+              <br>
+              const $section = $j('.hello-world');
+              <br>
+              let selection;
+              <br>
+              $j('[name=rem-radio]').each((node) => {
+              <br>
+              &nbsp&nbspif (node.checked) {
+              <br>
+              &nbsp&nbsp&nbsp&nbspselection = node;
+              <br>
+              &nbsp&nbsp}
+              <br>
+              });
+              <br>
+              switch (selection.id) {
+              <br>
+              &nbsp&nbspcase PARENS:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp$section.remove();
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspcase HELLO:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp$section.remove('.hello');
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspcase WORLD:
+              <br>
+              &nbsp&nbsp&nbsp&nbsp$section.remove('.world');
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              &nbsp&nbspdefault:
+              <br>
+              &nbsp&nbsp&nbsp&nbspreturn;
+              <br>
+              }
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="removeExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box remove-fix">
+            <section class="rem-choice">
+              <p>$j('.hello-world').remove</p>
+              <article class="rem-selections">
+                <label class="rem-selector">
+                  <input checked id="parens" type="radio" name="rem-radio">
+                  ()
+                </label>
+                <label class="rem-selector">
+                  <input id="hello" type="radio" name="rem-radio">
+                  ('.hello')
+                </label>
+                <label class="rem-selector">
+                  <input id="world" type="radio" name="rem-radio">
+                  ('.world')
+                </label>
+              </article>
+            </section>
+            <br>
+            <section class="hello-world">
+              <h1 class="hello-title">Hello World!</h1>
+              <div class="hello">Hello</div>
+              <div class="world">World</div>
+              <div class="hello">Hello</div>
+              <div class="world">World</div>
+              <div class="hello">Hello</div>
+              <div class="world">World</div>
+            </section>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="removeClass" class="definition-section">
+      <h1 class="define-title">.removeClass(<italic>className</italic>)</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">Removes the specified class from each element in the set of matched elements.</p>
+      </article>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Uses</h3>
+        <section class="code">
+          <section class="html">
+            <h3 class="code-title">HTML</h3>
+            <div class="code-text">
+              &lt;p id="sentence" class="red"&gt
+              <br>
+              &nbsp&nbspText will turn black.
+              <br>
+              &lt/p&gt
+            </div>
+          </section>
+          <section class="css">
+            <h3 class="code-title">CSS</h3>
+            <div class="code-text">
+              #sentence {
+                <br>
+                &nbsp&nbspfont-weight: 700;
+                <br>
+              }
+              <br><br>
+              .red {
+                <br>
+                &nbsp&nbspcolor: red;
+                <br>
+              }
+            </div>
+          </section>
+          <section class="javascript">
+            <h3 class="code-title">jaysQuery</h3>
+            <div class="code-text">
+              $j('#sentence').removeClass('red');
+            </div>
+          </section>
+        </section>
+        <section class="example">
+          <figure id="removeClassExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box">
+            <p id="sentence" class="red">
+              Text will turn black.
+            </p>
+          </section>
+        </section>
+      </article>
+    </div>
+
+    <div id="show" class="definition-section">
+      <h1 class="define-title">.show()</h1>
+      <br>
+      <article class="info-box">
+        <h3 class="info-box-title">Description</h3>
+        <p class="info-box-para">Shows a hidden element</p>
+        <p class="info-box-para">Styles are restored to whatever they were initially.</p>
       </article>
       <br>
       <article class="info-box">
@@ -1163,70 +1551,42 @@
           <section class="html">
             <h3 class="code-title">HTML</h3>
             <div class="code-text">
-              &lt;label id="html-label" for="html-input"&gt
+              &lt;p id="show-text" class="hidden"&gt
               <br>
-              &nbsp&nbspEnter Text:
+              &nbsp&nbspPOOF!
               <br>
-              &lt;/label&gt
-              <br>
-              &lt;br&gt
-              <br>
-              &lt;input id="html-input" type="text" value="Example Text"&gt
-              <br>
-              &lt;br&gt
-              <br>
-              &lt;p class="change-html"&gt&lt;/p&gt
+              &lt/p&gt
             </div>
           </section>
           <section class="css">
             <h3 class="code-title">CSS</h3>
             <div class="code-text">
-              #html-label {
-              <br>
-              &nbsp&nbspfont-weight: 700;
-              <br>
+              .on-show {
+                <br>
+                &nbsp&nbspcolor: green;
+                <br>
               }
-              <br>
-              #html-input {
-              <br>
-              &nbsp&nbspfont-size: 20px;
-              <br>
-              }
-              <br>
-              .change-html {
-              <br>
-              &nbsp&nbspmin-width: 227px;
-              <br>
-              &nbsp&nbspmin-height: 25px;
-              <br>
-              &nbsp&nbspborder: 1px solid black;
-              <br>
-              &nbsp&nbspfont-size: 20px;
-              <br>
-              &nbsp&nbspdisplay: inline-block;
-              <br>
+              <br><br>
+              .hidden {
+                <br>
+                &nbsp&nbspdisplay: none;
+                <br>
               }
             </div>
           </section>
           <section class="javascript">
             <h3 class="code-title">jaysQuery</h3>
             <div class="code-text">
-              const input = $j('#html-input').attr('value');
-              <br>
-              $j('.change-html').html(input);
+              $j('#show-text').show();
             </div>
           </section>
         </section>
         <section class="example">
-          <figure id="htmlExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <label id="html-label" for="html-input">
-              Enter Text:
-            </label>
-            <br>
-            <input id="html-input" type="text" value="Example Text">
-            <br>
-            <p class="change-html"></p>
+          <figure id="showExample" class="example-button">RUN&gt&gt</figure>
+          <section class="example-box afix-show">
+            <p id="show-text" class="on-show">
+              POOF!
+            </p>
           </section>
         </section>
       </article>
@@ -1300,366 +1660,6 @@
               <p class="size"></p>
             </h3>
             <textarea class="stretch"></textarea>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="height" class="definition-section">
-      <h1 class="define-title">.height()</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">Returns the height of the first element in the collection</p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class='code'>
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;h3 class="current"&gt
-              <br>
-              &nbsp&nbspCurrent Height:
-              <br>
-              &nbsp&nbsp&lt;p class="size"&gt&lt;/p&gt
-              <br>
-              &lt;/h3&gt
-              <br>
-              &lt;textarea class="stretch"&gt&lt;/textarea&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              .stretch {
-                <br>
-                &nbsp&nbspbackground-color: transparent;
-                <br>
-              }
-              <br><br>
-              .current {
-                <br>
-                &nbsp&nbspfont-size: 18px;
-                <br>
-                &nbsp&nbspfont-weight: 700;
-                <br>
-              }
-              <br><br>
-              .size {
-                <br>
-                &nbsp&nbspdisplay: inline-block;
-                <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              let $size = $j('.size');
-              <br><br>
-              let $textarea = $j('.stretch');
-              <br><br>
-              $size.html(` ${$textarea.height()}`);
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="heightExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <h3 class="current">
-              Current Height:
-              <p class="size"></p>
-            </h3>
-            <textarea class="stretch"></textarea>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="show" class="definition-section">
-      <h1 class="define-title">.show()</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">Shows a hidden element</p>
-        <p class="info-box-para">Styles are restored to whatever they were initially.</p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class='code'>
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;p id="show-text" class="hidden"&gt
-              <br>
-              &nbsp&nbspPOOF!
-              <br>
-              &lt/p&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              .on-show {
-                <br>
-                &nbsp&nbspcolor: green;
-                <br>
-              }
-              <br><br>
-              .hidden {
-                <br>
-                &nbsp&nbspdisplay: none;
-                <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('#show-text').show();
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="showExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box afix-show">
-            <p id="show-text" class="on-show">
-              POOF!
-            </p>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="hide" class="definition-section">
-      <h1 class="define-title">.hide()</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">Hides the elements in the collection</p>
-        <p class="warning">To make this work you must include a class named <code>.hidden { display: none; }</code> in your stylesheet</p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class='code'>
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;p class="will-disappear"&gt
-              <br>
-              &nbsp&nbspTest the magic.
-              <br>
-              &lt/p&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              .will-disappear {
-                <br>
-                &nbsp&nbspfont-weight: 700;
-                <br>
-              }
-              <br><br>
-              .hidden {
-                <br>
-                &nbsp&nbspdisplay: none;
-                <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('.will-disappear').hide();
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="hideExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box afix-hide">
-            <p class="will-disappear">
-              Test the magic.
-            </p>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="each" class="definition-section">
-      <h1 class="define-title">.each(<italic>callback</italic>)</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">For each element/node, executes the callback.</p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class="code">
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;p class="to-li"&gt
-              <br>
-              &nbsp&nbspText will turn into a blue LI.
-              <br>
-              &lt/p&gt
-              <br><br>
-              &lt;div class="to-li"&gt
-              <br>
-              &nbsp&nbspText will also turn into a blue LI.
-              <br>
-              &lt/div&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              .to-li {
-                <br>
-                &nbsp&nbspfont-weight: 700;
-                <br>
-              }
-              <br><br>
-              .new-li {
-                <br>
-                &nbsp&nbspcolor: blue;
-                <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('.to-li').each((el) => el.outerHTML = (`&lt;li class="new-li"&gt${el.innerHTML}&lt;/li&gt`);
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="eachExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <p class="to-li">
-              Text will turn into a blue LI.
-            </p>
-            <div class="to-li">
-              Text will also turn into a blue LI.
-            </div>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="removeClass" class="definition-section">
-      <h1 class="define-title">.removeClass(<italic>className</italic>)</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">Removes the specified class from each element in the set of matched elements.</p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class="code">
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;p id="sentence" class="red"&gt
-              <br>
-              &nbsp&nbspText will turn black.
-              <br>
-              &lt/p&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              #sentence {
-                <br>
-                &nbsp&nbspfont-weight: 700;
-                <br>
-              }
-              <br><br>
-              .red {
-                <br>
-                &nbsp&nbspcolor: red;
-                <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('#sentence').removeClass('red');
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="removeClassExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <p id="sentence" class="red">
-              Text will turn black.
-            </p>
-          </section>
-        </section>
-      </article>
-    </div>
-
-    <div id="addClass" class="definition-section">
-      <h1 class="define-title">.addClass(<italic>className</italic>)</h1>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Description</h3>
-        <p class="info-box-para">Adds the specified class(es) to each element in the set of matched elements.</p>
-        <p class="warning">This method does not replace a class. It appends it to the given classes of the node collection.</p>
-      </article>
-      <br>
-      <article class="info-box">
-        <h3 class="info-box-title">Uses</h3>
-        <section class="code">
-          <section class="html">
-            <h3 class="code-title">HTML</h3>
-            <div class="code-text">
-              &lt;p id="text" class=""&gt
-              <br>
-              &nbsp&nbspText will turn red
-              <br>
-              &lt/p&gt
-            </div>
-          </section>
-          <section class="css">
-            <h3 class="code-title">CSS</h3>
-            <div class="code-text">
-              #text {
-                <br>
-                &nbsp&nbspfont-weight: 700;
-                <br>
-              }
-              <br><br>
-              .red {
-                <br>
-                &nbsp&nbspcolor: red;
-                <br>
-              }
-            </div>
-          </section>
-          <section class="javascript">
-            <h3 class="code-title">jaysQuery</h3>
-            <div class="code-text">
-              $j('#text').addClass('red');
-            </div>
-          </section>
-        </section>
-        <section class="example">
-          <figure id="addClassExample" class="example-button">RUN&gt&gt</figure>
-          <section class="example-box">
-            <p id="text" class="">
-              Text will turn red
-            </p>
           </section>
         </section>
       </article>
