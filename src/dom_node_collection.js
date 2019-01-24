@@ -35,9 +35,7 @@ class DOMNodeCollection {
   }
 
   append(arg) {
-    if (typeof arg === 'string') {
-      this.each(node => node.innerHTML += arg);
-    } else if (arg instanceof HTMLElement) {
+    if (arg instanceof HTMLElement) {
       this.each(node => node.innerHTML += arg.outerHTML);
     } else if (arg.constructor.name === 'DOMNodeCollection') {
       this.each((node) => {
@@ -45,6 +43,8 @@ class DOMNodeCollection {
           node.appendChild(nodeArg);
         });
       });
+    } else {
+      this.each(node => node.innerHTML += `${arg}`);
     }
   }
 
