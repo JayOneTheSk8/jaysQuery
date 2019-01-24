@@ -1,4 +1,4 @@
-let about, addClass, append, attr, children, css, dropdownOpenStatus, each, empty,
+let about, addClass, append, attr, children, css, dropdownOpenStatus, each, empty, find,
 hide, height, html, on, off, parent, remove, removeClass, show, width;
 
 let $clickHere, $definition, $dropdownArea, $dropdownButton,
@@ -280,6 +280,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   append = $j('#append').html();
   parent = $j('#parent').html();
   children = $j('#children').html();
+  find = $j('#find').html();
   $dropdownMenu = $j('.function-list');
   $dropdownArea = $j('.dropdown-hover-area');
   $dropdownButton = $j('.close-dropdown-button');
@@ -309,6 +310,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   setClick($j('#to-append'), append);
   setClick($j('#to-parent'), parent);
   setClick($j('#to-children'), children);
+  setClick($j('#to-find'), find);
   $definition = $j('.definition');
   $sections = $j('.definition-section');
   $sections.remove();
