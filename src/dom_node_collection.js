@@ -34,7 +34,7 @@ class DOMNodeCollection {
     this.html('');
   }
 
-  append(arg) {
+  append(arg, format) {
     if (arg instanceof HTMLElement) {
       this.each(node => node.innerHTML += arg.outerHTML);
     } else if (arg.constructor.name === 'DOMNodeCollection') {
@@ -44,7 +44,15 @@ class DOMNodeCollection {
         });
       });
     } else {
-      this.each(node => node.innerHTML += `${arg}`);
+      this.each((node) => {
+        if ((node.constructor.name === "HTMLUListElement" || node.constructor.name === "HTMLOListElement") && format) {
+          let newLi = document.createElement('li');
+          newLi.innerHTML = `${arg}`;
+          node.innerHTML += newLi.outerHTML;
+        } else {
+          node.innerHTML += `${arg}`;
+        }
+      });
     }
   }
 
