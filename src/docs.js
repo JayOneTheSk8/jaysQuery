@@ -189,9 +189,7 @@ const playExample = (e) => {
       $increaseFont.css('font-size', `${fontSize + 2}px`);
       return;
     case APPEND:
-      let newLi = document.createElement('li');
-      newLi.innerHTML = "...and more";
-      $j('#add-lis').append(newLi);
+      $j('#add-lis').append("...and more", true);
       return;
     case CHILDREN:
       $j('#parent').children().css('color', 'blue');
@@ -230,11 +228,11 @@ const setClick = (queryObject, section) => {
 
 const showDropdownButton = () => {
   $dropdownButton.addClass('open-dropdown');
-}
+};
 
 const hideDropdownButton = () => {
   $dropdownButton.removeClass('open-dropdown');
-}
+};
 
 const toggleDropdown = () => {
   switch (dropdownOpenStatus) {
@@ -251,7 +249,7 @@ const toggleDropdown = () => {
     default:
       return;
   }
-}
+};
 
 const handleDropdown = (e) => {
   checkHeader();
