@@ -2,11 +2,9 @@ let about, addClass, append, attr, children, css, dropdownOpenStatus, each, empt
 hide, height, html, on, off, parent, remove, removeClass, show, width;
 
 let $clickHere, $definition, $dropdownArea, $dropdownButton,
-$dropdownMenu, $exampleButtons, $header, $lockButton, $mainContent, $moveableBox,
+$dropdownMenu, $exampleButton, $lockButton, $moveableBox,
 $sections, $showItem;
 
-const WINDOW = "WINDOW";
-const BUTTON = "BUTTON";
 const ADD_CLASS = "addClassExample";
 const REMOVE_CLASS = "removeClassExample";
 const EACH = "eachExample";
@@ -15,7 +13,6 @@ const SHOW = "showExample";
 const HEIGHT = "heightExample";
 const WIDTH = "widthExample";
 const HTML = "htmlExample";
-const ON = "onExample";
 const EMPTY = "emptyExample";
 const REMOVE = "removeExample";
 const ATTR = "attrExample";
@@ -95,7 +92,7 @@ const changeButtonPosition = (e) => {
   }
 };
 
-function checkHeader() {
+const checkHeader = () => {
   if (window.innerWidth < 960) {
     dropdownOpenStatus = false;
   } else if (window.innerWidth >= 960) {
@@ -137,7 +134,7 @@ const playExample = (e) => {
       $showItem.show();
       return;
     case HEIGHT:
-    case WIDTH:
+    case WIDTH: {
       let $size = $j('.size');
       let $textarea = $j('.stretch');
       if (e.currentTarget.id === HEIGHT) {
@@ -146,14 +143,16 @@ const playExample = (e) => {
         $size.html(` ${$textarea.width()}`);
       }
       return;
-    case HTML:
+    }
+    case HTML: {
       const input = $j('#html-input').attr('value');
       $j('.change-html').html(input);
       return;
+    }
     case EMPTY:
       $j('#will-empty').empty();
       return;
-    case REMOVE:
+    case REMOVE: {
       const PARENS = "parens";
       const HELLO = "hello";
       const WORLD = "world";
@@ -177,17 +176,19 @@ const playExample = (e) => {
         default:
           return;
       }
-      return;
-    case ATTR:
+    }
+    case ATTR: {
       let $attrButton = $j('#attr-button');
       handleAttrButton($attrButton);
       return;
-    case CSS:
+    }
+    case CSS: {
       const $increaseFont = $j('#increase-font');
       let pixelFont = $increaseFont.css('font-size');
       let fontSize = parseInt(pixelFont.split('px')[0]);
       $increaseFont.css('font-size', `${fontSize + 2}px`);
       return;
+    }
     case APPEND:
       $j('#add-lis').append("...and more", true);
       return;
@@ -205,7 +206,7 @@ const playExample = (e) => {
   }
 };
 
-const moveButton = (e) => {
+const moveButton = () => {
   switch ($clickHere.attr('classList').length) {
     case 1:
       $clickHere.addClass('middle-position');
@@ -241,29 +242,29 @@ const toggleDropdown = () => {
       $definition.removeClass('shifted');
       return;
     case false:
-        if (!$dropdownMenu.attr('className').includes('closed')) {
-          $dropdownMenu.hide();
-          $definition.removeClass('shifted');
-        }
+      if (!$dropdownMenu.attr('className').includes('closed')) {
+        $dropdownMenu.hide();
+        $definition.removeClass('shifted');
+      }
       return;
     default:
       return;
   }
 };
 
-const handleDropdown = (e) => {
+const handleDropdown = () => {
   checkHeader();
   toggleDropdown();
 };
 
-const changeDropdown = (e) => {
+const changeDropdown = () => {
   dropdownOpenStatus = dropdownOpenStatus === true ? false : true;
   toggleDropdown();
 };
 
 window.addEventListener("resize", handleDropdown);
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
   about = $j('#about').html();
   addClass = $j('#addClass').html();
   removeClass = $j('#removeClass').html();
@@ -291,8 +292,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   $dropdownButton.on('click', changeDropdown);
   $dropdownButton.on('mouseenter', showDropdownButton);
   $dropdownButton.on('mouseleave', hideDropdownButton);
-  $header = $j('.header');
-  $mainContent = $j('.main-content');
   setClick($j('#to-about'), about);
   setClick($j('#to-addClass'), addClass);
   setClick($j('#to-removeClass'), removeClass);

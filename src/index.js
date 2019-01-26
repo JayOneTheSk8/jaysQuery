@@ -3,14 +3,14 @@ const DOMNodeCollection = require('./dom_node_collection.js');
 const loadedFunctions = [];
 let documentReady = false;
 
-$j = (arg) => {
+const $j = (arg) => {
   if (arg instanceof HTMLElement) {
     return new DOMNodeCollection([arg]);
   } else if (typeof arg === "string") {
     return new DOMNodeCollection(document.querySelectorAll(arg));
   } else if (typeof arg === 'function') {
     if (documentReady) {
-      arg()
+      arg();
     } else {
       loadedFunctions.push(arg);
     }
@@ -48,7 +48,7 @@ function sendRequest(obj) {
   const xml = new XMLHttpRequest();
   return new Promise((resolve, reject) => {
     xml.open(obj.method, obj.url);
-    xml.onload = (e) => {
+    xml.onload = () => {
       const responseJson = JSON.parse(xml.response);
       if (xml.status === 200) {
         resolve(responseJson);
