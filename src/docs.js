@@ -111,7 +111,7 @@ const handleAttrButton = (button) => {
 };
 
 const linkTo = (section) => {
-  return e => {
+  return () => {
     changeDefinition(section);
   };
 };
