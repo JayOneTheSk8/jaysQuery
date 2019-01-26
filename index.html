@@ -104,12 +104,16 @@
     </div>
 
     <div id="append" class="definition-section">
-      <h1 class="define-title">.append(<italic>arg</italic>)</h1>
+      <h1 class="define-title">.append(<italic>arg</italic>, <italic>[format]</italic>)</h1>
       <br>
       <article class="info-box">
         <h3 class="info-box-title">Description</h3>
         <p class="info-box-para">
           Inserts the passed arg to the end of each element in the collection
+        </p>
+        <p class="info-box-para">
+          When setting the <code>format</code> parameter to <purple>true</purple>,
+          will format <code>arg</code> into lis if any element in the collection is a HTML List Element
         </p>
       </article>
       <br>

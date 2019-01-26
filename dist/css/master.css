@@ -18,6 +18,10 @@ italic {
   font-style: italic;
 }
 
+purple {
+  color: purple;
+}
+
 .close-dropdown-button {
   cursor: pointer;
   font-size: 30px;
